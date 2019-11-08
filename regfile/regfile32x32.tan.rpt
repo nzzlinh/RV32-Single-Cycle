@@ -1,0 +1,897 @@
+Classic Timing Analyzer report for regfile32x32
+Thu Oct 31 10:26:46 2019
+Quartus II Version 9.1 Build 222 10/21/2009 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. tsu
+  7. tco
+  8. tpd
+  9. th
+ 10. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                     ;
++------------------------------+-------+---------------+-------------+---------------+-----------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time ; From          ; To              ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+-------------+---------------+-----------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 7.844 ns    ; instr[9]      ; regfile[22][12] ; --         ; clk      ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 13.708 ns   ; regfile[4][7] ; rdDataA[7]      ; clk        ; --       ; 0            ;
+; Worst-case tpd               ; N/A   ; None          ; 17.670 ns   ; instr[19]     ; rdDataA[7]      ; --         ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; 0.482 ns    ; wrDataD[8]    ; regfile[11][8]  ; --         ; clk      ; 0            ;
+; Total number of failed paths ;       ;               ;             ;               ;                 ;            ;          ; 0            ;
++------------------------------+-------+---------------+-------------+---------------+-----------------+------------+----------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                                                            ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                                                               ; Setting            ; From ; To ; Entity Name ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                                                          ; EP2C5F256C6        ;      ;    ;             ;
+; Timing Models                                                                                        ; Final              ;      ;    ;             ;
+; Default hold multicycle                                                                              ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                                                            ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                                                               ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                                                       ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                                                     ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                                                                ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                                                              ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                                                     ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                                                 ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                                                        ; Off                ;      ;    ;             ;
+; Number of source nodes to report per destination node                                                ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                                                                ; 10                 ;      ;    ;             ;
+; Number of paths to report                                                                            ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                                                         ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                                                               ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                                                           ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                                                         ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis                                       ; Off                ;      ;    ;             ;
+; Reports worst-case timing paths for each clock domain and analysis                                   ; On                 ;      ;    ;             ;
+; Specifies the maximum number of worst-case timing paths to report for each clock domain and analysis ; 100                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation                                  ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                                                           ; Near End           ;      ;    ;             ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; clk             ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; tsu                                                                                                                                                 ;
++-----------------------------------------+-----------------------------------------------------+------------+-----------+-----------------+----------+
+; Slack                                   ; Required tsu                                        ; Actual tsu ; From      ; To              ; To Clock ;
++-----------------------------------------+-----------------------------------------------------+------------+-----------+-----------------+----------+
+; N/A                                     ; None                                                ; 7.844 ns   ; instr[9]  ; regfile[22][0]  ; clk      ;
+; N/A                                     ; None                                                ; 7.844 ns   ; instr[9]  ; regfile[22][1]  ; clk      ;
+; N/A                                     ; None                                                ; 7.844 ns   ; instr[9]  ; regfile[22][2]  ; clk      ;
+; N/A                                     ; None                                                ; 7.844 ns   ; instr[9]  ; regfile[22][3]  ; clk      ;
+; N/A                                     ; None                                                ; 7.844 ns   ; instr[9]  ; regfile[22][4]  ; clk      ;
+; N/A                                     ; None                                                ; 7.844 ns   ; instr[9]  ; regfile[22][5]  ; clk      ;
+; N/A                                     ; None                                                ; 7.844 ns   ; instr[9]  ; regfile[22][6]  ; clk      ;
+; N/A                                     ; None                                                ; 7.844 ns   ; instr[9]  ; regfile[22][7]  ; clk      ;
+; N/A                                     ; None                                                ; 7.844 ns   ; instr[9]  ; regfile[22][8]  ; clk      ;
+; N/A                                     ; None                                                ; 7.844 ns   ; instr[9]  ; regfile[22][10] ; clk      ;
+; N/A                                     ; None                                                ; 7.844 ns   ; instr[9]  ; regfile[22][12] ; clk      ;
+; N/A                                     ; None                                                ; 7.675 ns   ; instr[9]  ; regfile[30][0]  ; clk      ;
+; N/A                                     ; None                                                ; 7.675 ns   ; instr[9]  ; regfile[30][1]  ; clk      ;
+; N/A                                     ; None                                                ; 7.675 ns   ; instr[9]  ; regfile[30][2]  ; clk      ;
+; N/A                                     ; None                                                ; 7.675 ns   ; instr[9]  ; regfile[30][3]  ; clk      ;
+; N/A                                     ; None                                                ; 7.675 ns   ; instr[9]  ; regfile[30][4]  ; clk      ;
+; N/A                                     ; None                                                ; 7.675 ns   ; instr[9]  ; regfile[30][5]  ; clk      ;
+; N/A                                     ; None                                                ; 7.675 ns   ; instr[9]  ; regfile[30][6]  ; clk      ;
+; N/A                                     ; None                                                ; 7.590 ns   ; instr[9]  ; regfile[22][13] ; clk      ;
+; N/A                                     ; None                                                ; 7.590 ns   ; instr[9]  ; regfile[22][14] ; clk      ;
+; N/A                                     ; None                                                ; 7.590 ns   ; instr[9]  ; regfile[22][15] ; clk      ;
+; N/A                                     ; None                                                ; 7.588 ns   ; reset     ; regfile[13][10] ; clk      ;
+; N/A                                     ; None                                                ; 7.588 ns   ; reset     ; regfile[9][10]  ; clk      ;
+; N/A                                     ; None                                                ; 7.580 ns   ; instr[9]  ; regfile[14][7]  ; clk      ;
+; N/A                                     ; None                                                ; 7.580 ns   ; instr[9]  ; regfile[14][8]  ; clk      ;
+; N/A                                     ; None                                                ; 7.580 ns   ; instr[9]  ; regfile[14][9]  ; clk      ;
+; N/A                                     ; None                                                ; 7.554 ns   ; reset     ; regfile[30][0]  ; clk      ;
+; N/A                                     ; None                                                ; 7.554 ns   ; reset     ; regfile[30][1]  ; clk      ;
+; N/A                                     ; None                                                ; 7.554 ns   ; reset     ; regfile[30][2]  ; clk      ;
+; N/A                                     ; None                                                ; 7.554 ns   ; reset     ; regfile[30][3]  ; clk      ;
+; N/A                                     ; None                                                ; 7.554 ns   ; reset     ; regfile[30][4]  ; clk      ;
+; N/A                                     ; None                                                ; 7.554 ns   ; reset     ; regfile[30][5]  ; clk      ;
+; N/A                                     ; None                                                ; 7.554 ns   ; reset     ; regfile[30][6]  ; clk      ;
+; N/A                                     ; None                                                ; 7.551 ns   ; instr[9]  ; regfile[14][0]  ; clk      ;
+; N/A                                     ; None                                                ; 7.551 ns   ; instr[9]  ; regfile[14][1]  ; clk      ;
+; N/A                                     ; None                                                ; 7.551 ns   ; instr[9]  ; regfile[14][2]  ; clk      ;
+; N/A                                     ; None                                                ; 7.551 ns   ; instr[9]  ; regfile[14][3]  ; clk      ;
+; N/A                                     ; None                                                ; 7.551 ns   ; instr[9]  ; regfile[14][4]  ; clk      ;
+; N/A                                     ; None                                                ; 7.551 ns   ; instr[9]  ; regfile[14][5]  ; clk      ;
+; N/A                                     ; None                                                ; 7.551 ns   ; instr[9]  ; regfile[14][6]  ; clk      ;
+; N/A                                     ; None                                                ; 7.500 ns   ; reset     ; regfile[17][15] ; clk      ;
+; N/A                                     ; None                                                ; 7.499 ns   ; reset     ; regfile[19][15] ; clk      ;
+; N/A                                     ; None                                                ; 7.475 ns   ; reset     ; regfile[30][10] ; clk      ;
+; N/A                                     ; None                                                ; 7.471 ns   ; reset     ; regfile[14][10] ; clk      ;
+; N/A                                     ; None                                                ; 7.464 ns   ; instr[7]  ; regfile[22][0]  ; clk      ;
+; N/A                                     ; None                                                ; 7.464 ns   ; instr[7]  ; regfile[22][1]  ; clk      ;
+; N/A                                     ; None                                                ; 7.464 ns   ; instr[7]  ; regfile[22][2]  ; clk      ;
+; N/A                                     ; None                                                ; 7.464 ns   ; instr[7]  ; regfile[22][3]  ; clk      ;
+; N/A                                     ; None                                                ; 7.464 ns   ; instr[7]  ; regfile[22][4]  ; clk      ;
+; N/A                                     ; None                                                ; 7.464 ns   ; instr[7]  ; regfile[22][5]  ; clk      ;
+; N/A                                     ; None                                                ; 7.464 ns   ; instr[7]  ; regfile[22][6]  ; clk      ;
+; N/A                                     ; None                                                ; 7.464 ns   ; instr[7]  ; regfile[22][7]  ; clk      ;
+; N/A                                     ; None                                                ; 7.464 ns   ; instr[7]  ; regfile[22][8]  ; clk      ;
+; N/A                                     ; None                                                ; 7.464 ns   ; instr[7]  ; regfile[22][10] ; clk      ;
+; N/A                                     ; None                                                ; 7.464 ns   ; instr[7]  ; regfile[22][12] ; clk      ;
+; N/A                                     ; None                                                ; 7.460 ns   ; instr[9]  ; regfile[30][7]  ; clk      ;
+; N/A                                     ; None                                                ; 7.460 ns   ; instr[9]  ; regfile[30][8]  ; clk      ;
+; N/A                                     ; None                                                ; 7.460 ns   ; instr[9]  ; regfile[30][9]  ; clk      ;
+; N/A                                     ; None                                                ; 7.460 ns   ; instr[9]  ; regfile[30][10] ; clk      ;
+; N/A                                     ; None                                                ; 7.460 ns   ; instr[9]  ; regfile[30][11] ; clk      ;
+; N/A                                     ; None                                                ; 7.460 ns   ; instr[9]  ; regfile[30][12] ; clk      ;
+; N/A                                     ; None                                                ; 7.460 ns   ; instr[9]  ; regfile[30][13] ; clk      ;
+; N/A                                     ; None                                                ; 7.452 ns   ; instr[10] ; regfile[22][0]  ; clk      ;
+; N/A                                     ; None                                                ; 7.452 ns   ; instr[10] ; regfile[22][1]  ; clk      ;
+; N/A                                     ; None                                                ; 7.452 ns   ; instr[10] ; regfile[22][2]  ; clk      ;
+; N/A                                     ; None                                                ; 7.452 ns   ; instr[10] ; regfile[22][3]  ; clk      ;
+; N/A                                     ; None                                                ; 7.452 ns   ; instr[10] ; regfile[22][4]  ; clk      ;
+; N/A                                     ; None                                                ; 7.452 ns   ; instr[10] ; regfile[22][5]  ; clk      ;
+; N/A                                     ; None                                                ; 7.452 ns   ; instr[10] ; regfile[22][6]  ; clk      ;
+; N/A                                     ; None                                                ; 7.452 ns   ; instr[10] ; regfile[22][7]  ; clk      ;
+; N/A                                     ; None                                                ; 7.452 ns   ; instr[10] ; regfile[22][8]  ; clk      ;
+; N/A                                     ; None                                                ; 7.452 ns   ; instr[10] ; regfile[22][10] ; clk      ;
+; N/A                                     ; None                                                ; 7.452 ns   ; instr[10] ; regfile[22][12] ; clk      ;
+; N/A                                     ; None                                                ; 7.449 ns   ; reset     ; regfile[14][7]  ; clk      ;
+; N/A                                     ; None                                                ; 7.449 ns   ; reset     ; regfile[14][8]  ; clk      ;
+; N/A                                     ; None                                                ; 7.449 ns   ; reset     ; regfile[14][9]  ; clk      ;
+; N/A                                     ; None                                                ; 7.431 ns   ; instr[9]  ; regfile[30][14] ; clk      ;
+; N/A                                     ; None                                                ; 7.431 ns   ; instr[9]  ; regfile[30][15] ; clk      ;
+; N/A                                     ; None                                                ; 7.423 ns   ; reset     ; regfile[1][15]  ; clk      ;
+; N/A                                     ; None                                                ; 7.420 ns   ; reset     ; regfile[14][0]  ; clk      ;
+; N/A                                     ; None                                                ; 7.420 ns   ; reset     ; regfile[14][1]  ; clk      ;
+; N/A                                     ; None                                                ; 7.420 ns   ; reset     ; regfile[14][2]  ; clk      ;
+; N/A                                     ; None                                                ; 7.420 ns   ; reset     ; regfile[14][3]  ; clk      ;
+; N/A                                     ; None                                                ; 7.420 ns   ; reset     ; regfile[14][4]  ; clk      ;
+; N/A                                     ; None                                                ; 7.420 ns   ; reset     ; regfile[14][5]  ; clk      ;
+; N/A                                     ; None                                                ; 7.420 ns   ; reset     ; regfile[14][6]  ; clk      ;
+; N/A                                     ; None                                                ; 7.420 ns   ; reset     ; regfile[3][15]  ; clk      ;
+; N/A                                     ; None                                                ; 7.416 ns   ; instr[9]  ; regfile[6][2]   ; clk      ;
+; N/A                                     ; None                                                ; 7.416 ns   ; instr[9]  ; regfile[6][4]   ; clk      ;
+; N/A                                     ; None                                                ; 7.416 ns   ; instr[9]  ; regfile[6][6]   ; clk      ;
+; N/A                                     ; None                                                ; 7.416 ns   ; instr[9]  ; regfile[6][10]  ; clk      ;
+; N/A                                     ; None                                                ; 7.416 ns   ; instr[9]  ; regfile[6][12]  ; clk      ;
+; N/A                                     ; None                                                ; 7.393 ns   ; reset     ; regfile[23][0]  ; clk      ;
+; N/A                                     ; None                                                ; 7.393 ns   ; reset     ; regfile[23][1]  ; clk      ;
+; N/A                                     ; None                                                ; 7.393 ns   ; reset     ; regfile[23][2]  ; clk      ;
+; N/A                                     ; None                                                ; 7.393 ns   ; reset     ; regfile[23][3]  ; clk      ;
+; N/A                                     ; None                                                ; 7.393 ns   ; reset     ; regfile[23][4]  ; clk      ;
+; N/A                                     ; None                                                ; 7.393 ns   ; reset     ; regfile[23][5]  ; clk      ;
+; N/A                                     ; None                                                ; 7.393 ns   ; reset     ; regfile[23][6]  ; clk      ;
+; N/A                                     ; None                                                ; 7.393 ns   ; reset     ; regfile[23][7]  ; clk      ;
+; N/A                                     ; None                                                ; 7.368 ns   ; instr[9]  ; regfile[6][3]   ; clk      ;
+; N/A                                     ; None                                                ; 7.368 ns   ; instr[9]  ; regfile[6][5]   ; clk      ;
+; N/A                                     ; None                                                ; 7.368 ns   ; instr[9]  ; regfile[6][11]  ; clk      ;
+; N/A                                     ; None                                                ; 7.368 ns   ; instr[9]  ; regfile[6][13]  ; clk      ;
+; N/A                                     ; None                                                ; 7.368 ns   ; instr[9]  ; regfile[6][14]  ; clk      ;
+; N/A                                     ; None                                                ; 7.368 ns   ; instr[9]  ; regfile[6][15]  ; clk      ;
+; N/A                                     ; None                                                ; 7.364 ns   ; instr[8]  ; regfile[22][0]  ; clk      ;
+; N/A                                     ; None                                                ; 7.364 ns   ; instr[8]  ; regfile[22][1]  ; clk      ;
+; N/A                                     ; None                                                ; 7.364 ns   ; instr[8]  ; regfile[22][2]  ; clk      ;
+; N/A                                     ; None                                                ; 7.364 ns   ; instr[8]  ; regfile[22][3]  ; clk      ;
+; N/A                                     ; None                                                ; 7.364 ns   ; instr[8]  ; regfile[22][4]  ; clk      ;
+; N/A                                     ; None                                                ; 7.364 ns   ; instr[8]  ; regfile[22][5]  ; clk      ;
+; N/A                                     ; None                                                ; 7.364 ns   ; instr[8]  ; regfile[22][6]  ; clk      ;
+; N/A                                     ; None                                                ; 7.364 ns   ; instr[8]  ; regfile[22][7]  ; clk      ;
+; N/A                                     ; None                                                ; 7.364 ns   ; instr[8]  ; regfile[22][8]  ; clk      ;
+; N/A                                     ; None                                                ; 7.364 ns   ; instr[8]  ; regfile[22][10] ; clk      ;
+; N/A                                     ; None                                                ; 7.364 ns   ; instr[8]  ; regfile[22][12] ; clk      ;
+; N/A                                     ; None                                                ; 7.362 ns   ; instr[9]  ; regfile[6][0]   ; clk      ;
+; N/A                                     ; None                                                ; 7.362 ns   ; instr[9]  ; regfile[6][1]   ; clk      ;
+; N/A                                     ; None                                                ; 7.362 ns   ; instr[9]  ; regfile[6][7]   ; clk      ;
+; N/A                                     ; None                                                ; 7.362 ns   ; instr[9]  ; regfile[6][8]   ; clk      ;
+; N/A                                     ; None                                                ; 7.362 ns   ; instr[9]  ; regfile[6][9]   ; clk      ;
+; N/A                                     ; None                                                ; 7.345 ns   ; instr[9]  ; regfile[15][1]  ; clk      ;
+; N/A                                     ; None                                                ; 7.345 ns   ; instr[9]  ; regfile[15][3]  ; clk      ;
+; N/A                                     ; None                                                ; 7.345 ns   ; instr[9]  ; regfile[15][4]  ; clk      ;
+; N/A                                     ; None                                                ; 7.345 ns   ; instr[9]  ; regfile[15][5]  ; clk      ;
+; N/A                                     ; None                                                ; 7.345 ns   ; instr[9]  ; regfile[15][6]  ; clk      ;
+; N/A                                     ; None                                                ; 7.345 ns   ; instr[9]  ; regfile[15][7]  ; clk      ;
+; N/A                                     ; None                                                ; 7.345 ns   ; instr[9]  ; regfile[15][8]  ; clk      ;
+; N/A                                     ; None                                                ; 7.345 ns   ; instr[9]  ; regfile[15][9]  ; clk      ;
+; N/A                                     ; None                                                ; 7.343 ns   ; instr[9]  ; regfile[15][11] ; clk      ;
+; N/A                                     ; None                                                ; 7.343 ns   ; instr[9]  ; regfile[15][12] ; clk      ;
+; N/A                                     ; None                                                ; 7.343 ns   ; instr[9]  ; regfile[15][13] ; clk      ;
+; N/A                                     ; None                                                ; 7.343 ns   ; instr[9]  ; regfile[15][14] ; clk      ;
+; N/A                                     ; None                                                ; 7.343 ns   ; instr[9]  ; regfile[15][15] ; clk      ;
+; N/A                                     ; None                                                ; 7.339 ns   ; reset     ; regfile[30][7]  ; clk      ;
+; N/A                                     ; None                                                ; 7.339 ns   ; reset     ; regfile[30][8]  ; clk      ;
+; N/A                                     ; None                                                ; 7.339 ns   ; reset     ; regfile[30][9]  ; clk      ;
+; N/A                                     ; None                                                ; 7.339 ns   ; reset     ; regfile[30][11] ; clk      ;
+; N/A                                     ; None                                                ; 7.339 ns   ; reset     ; regfile[30][12] ; clk      ;
+; N/A                                     ; None                                                ; 7.339 ns   ; reset     ; regfile[30][13] ; clk      ;
+; N/A                                     ; None                                                ; 7.317 ns   ; instr[9]  ; regfile[11][1]  ; clk      ;
+; N/A                                     ; None                                                ; 7.317 ns   ; instr[9]  ; regfile[11][3]  ; clk      ;
+; N/A                                     ; None                                                ; 7.317 ns   ; instr[9]  ; regfile[11][4]  ; clk      ;
+; N/A                                     ; None                                                ; 7.317 ns   ; instr[9]  ; regfile[11][5]  ; clk      ;
+; N/A                                     ; None                                                ; 7.317 ns   ; instr[9]  ; regfile[11][6]  ; clk      ;
+; N/A                                     ; None                                                ; 7.317 ns   ; instr[9]  ; regfile[11][7]  ; clk      ;
+; N/A                                     ; None                                                ; 7.317 ns   ; instr[9]  ; regfile[11][8]  ; clk      ;
+; N/A                                     ; None                                                ; 7.317 ns   ; instr[9]  ; regfile[11][9]  ; clk      ;
+; N/A                                     ; None                                                ; 7.311 ns   ; instr[10] ; regfile[30][0]  ; clk      ;
+; N/A                                     ; None                                                ; 7.311 ns   ; instr[10] ; regfile[30][1]  ; clk      ;
+; N/A                                     ; None                                                ; 7.311 ns   ; instr[10] ; regfile[30][2]  ; clk      ;
+; N/A                                     ; None                                                ; 7.311 ns   ; instr[10] ; regfile[30][3]  ; clk      ;
+; N/A                                     ; None                                                ; 7.311 ns   ; instr[10] ; regfile[30][4]  ; clk      ;
+; N/A                                     ; None                                                ; 7.311 ns   ; instr[10] ; regfile[30][5]  ; clk      ;
+; N/A                                     ; None                                                ; 7.311 ns   ; instr[10] ; regfile[30][6]  ; clk      ;
+; N/A                                     ; None                                                ; 7.310 ns   ; reset     ; regfile[30][14] ; clk      ;
+; N/A                                     ; None                                                ; 7.310 ns   ; reset     ; regfile[30][15] ; clk      ;
+; N/A                                     ; None                                                ; 7.295 ns   ; instr[9]  ; regfile[10][0]  ; clk      ;
+; N/A                                     ; None                                                ; 7.295 ns   ; instr[9]  ; regfile[10][1]  ; clk      ;
+; N/A                                     ; None                                                ; 7.295 ns   ; instr[9]  ; regfile[10][2]  ; clk      ;
+; N/A                                     ; None                                                ; 7.295 ns   ; instr[9]  ; regfile[10][3]  ; clk      ;
+; N/A                                     ; None                                                ; 7.295 ns   ; instr[9]  ; regfile[10][4]  ; clk      ;
+; N/A                                     ; None                                                ; 7.295 ns   ; instr[9]  ; regfile[10][5]  ; clk      ;
+; N/A                                     ; None                                                ; 7.295 ns   ; instr[9]  ; regfile[10][6]  ; clk      ;
+; N/A                                     ; None                                                ; 7.294 ns   ; instr[7]  ; regfile[30][0]  ; clk      ;
+; N/A                                     ; None                                                ; 7.294 ns   ; instr[7]  ; regfile[30][1]  ; clk      ;
+; N/A                                     ; None                                                ; 7.294 ns   ; instr[7]  ; regfile[30][2]  ; clk      ;
+; N/A                                     ; None                                                ; 7.294 ns   ; instr[7]  ; regfile[30][3]  ; clk      ;
+; N/A                                     ; None                                                ; 7.294 ns   ; instr[7]  ; regfile[30][4]  ; clk      ;
+; N/A                                     ; None                                                ; 7.294 ns   ; instr[7]  ; regfile[30][5]  ; clk      ;
+; N/A                                     ; None                                                ; 7.294 ns   ; instr[7]  ; regfile[30][6]  ; clk      ;
+; N/A                                     ; None                                                ; 7.284 ns   ; instr[9]  ; regfile[14][10] ; clk      ;
+; N/A                                     ; None                                                ; 7.284 ns   ; instr[9]  ; regfile[14][11] ; clk      ;
+; N/A                                     ; None                                                ; 7.284 ns   ; instr[9]  ; regfile[14][12] ; clk      ;
+; N/A                                     ; None                                                ; 7.284 ns   ; instr[9]  ; regfile[14][13] ; clk      ;
+; N/A                                     ; None                                                ; 7.279 ns   ; instr[9]  ; regfile[14][14] ; clk      ;
+; N/A                                     ; None                                                ; 7.279 ns   ; instr[9]  ; regfile[14][15] ; clk      ;
+; N/A                                     ; None                                                ; 7.261 ns   ; reset     ; regfile[5][10]  ; clk      ;
+; N/A                                     ; None                                                ; 7.261 ns   ; reset     ; regfile[7][10]  ; clk      ;
+; N/A                                     ; None                                                ; 7.258 ns   ; reset     ; regfile[22][15] ; clk      ;
+; N/A                                     ; None                                                ; 7.248 ns   ; reset     ; regfile[14][15] ; clk      ;
+; N/A                                     ; None                                                ; 7.246 ns   ; reset     ; regfile[6][15]  ; clk      ;
+; N/A                                     ; None                                                ; 7.240 ns   ; instr[9]  ; regfile[23][0]  ; clk      ;
+; N/A                                     ; None                                                ; 7.240 ns   ; instr[9]  ; regfile[23][1]  ; clk      ;
+; N/A                                     ; None                                                ; 7.240 ns   ; instr[9]  ; regfile[23][2]  ; clk      ;
+; N/A                                     ; None                                                ; 7.240 ns   ; instr[9]  ; regfile[23][3]  ; clk      ;
+; N/A                                     ; None                                                ; 7.240 ns   ; instr[9]  ; regfile[23][4]  ; clk      ;
+; N/A                                     ; None                                                ; 7.240 ns   ; instr[9]  ; regfile[23][5]  ; clk      ;
+; N/A                                     ; None                                                ; 7.240 ns   ; instr[9]  ; regfile[23][6]  ; clk      ;
+; N/A                                     ; None                                                ; 7.240 ns   ; instr[9]  ; regfile[23][7]  ; clk      ;
+; N/A                                     ; None                                                ; 7.230 ns   ; reset     ; regfile[24][10] ; clk      ;
+; N/A                                     ; None                                                ; 7.229 ns   ; reset     ; regfile[8][10]  ; clk      ;
+; N/A                                     ; None                                                ; 7.216 ns   ; instr[10] ; regfile[14][7]  ; clk      ;
+; N/A                                     ; None                                                ; 7.216 ns   ; instr[10] ; regfile[14][8]  ; clk      ;
+; N/A                                     ; None                                                ; 7.216 ns   ; instr[10] ; regfile[14][9]  ; clk      ;
+; N/A                                     ; None                                                ; 7.215 ns   ; reset     ; regfile[7][1]   ; clk      ;
+; N/A                                     ; None                                                ; 7.215 ns   ; reset     ; regfile[7][2]   ; clk      ;
+; N/A                                     ; None                                                ; 7.215 ns   ; reset     ; regfile[7][3]   ; clk      ;
+; N/A                                     ; None                                                ; 7.215 ns   ; reset     ; regfile[7][4]   ; clk      ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;            ;           ;                 ;          ;
++-----------------------------------------+-----------------------------------------------------+------------+-----------+-----------------+----------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; tco                                                                                                                                                     ;
++-----------------------------------------+-----------------------------------------------------+------------+-----------------+-------------+------------+
+; Slack                                   ; Required tco                                        ; Actual tco ; From            ; To          ; From Clock ;
++-----------------------------------------+-----------------------------------------------------+------------+-----------------+-------------+------------+
+; N/A                                     ; None                                                ; 13.708 ns  ; regfile[4][7]   ; rdDataA[7]  ; clk        ;
+; N/A                                     ; None                                                ; 13.440 ns  ; regfile[1][3]   ; rdDataA[3]  ; clk        ;
+; N/A                                     ; None                                                ; 13.434 ns  ; regfile[12][7]  ; rdDataA[7]  ; clk        ;
+; N/A                                     ; None                                                ; 13.322 ns  ; regfile[9][3]   ; rdDataA[3]  ; clk        ;
+; N/A                                     ; None                                                ; 13.185 ns  ; regfile[4][3]   ; rdDataA[3]  ; clk        ;
+; N/A                                     ; None                                                ; 13.079 ns  ; regfile[9][13]  ; rdDataA[13] ; clk        ;
+; N/A                                     ; None                                                ; 13.009 ns  ; regfile[9][5]   ; rdDataA[5]  ; clk        ;
+; N/A                                     ; None                                                ; 12.945 ns  ; regfile[13][13] ; rdDataA[13] ; clk        ;
+; N/A                                     ; None                                                ; 12.926 ns  ; regfile[13][3]  ; rdDataA[3]  ; clk        ;
+; N/A                                     ; None                                                ; 12.877 ns  ; regfile[13][5]  ; rdDataA[5]  ; clk        ;
+; N/A                                     ; None                                                ; 12.868 ns  ; regfile[12][3]  ; rdDataA[3]  ; clk        ;
+; N/A                                     ; None                                                ; 12.824 ns  ; regfile[28][8]  ; rdDataA[8]  ; clk        ;
+; N/A                                     ; None                                                ; 12.806 ns  ; regfile[3][3]   ; rdDataA[3]  ; clk        ;
+; N/A                                     ; None                                                ; 12.762 ns  ; regfile[9][7]   ; rdDataA[7]  ; clk        ;
+; N/A                                     ; None                                                ; 12.703 ns  ; regfile[28][7]  ; rdDataA[7]  ; clk        ;
+; N/A                                     ; None                                                ; 12.665 ns  ; regfile[2][6]   ; rdDataA[6]  ; clk        ;
+; N/A                                     ; None                                                ; 12.664 ns  ; regfile[2][8]   ; rdDataA[8]  ; clk        ;
+; N/A                                     ; None                                                ; 12.650 ns  ; regfile[28][14] ; rdDataA[14] ; clk        ;
+; N/A                                     ; None                                                ; 12.633 ns  ; regfile[13][7]  ; rdDataA[7]  ; clk        ;
+; N/A                                     ; None                                                ; 12.581 ns  ; regfile[4][13]  ; rdDataA[13] ; clk        ;
+; N/A                                     ; None                                                ; 12.560 ns  ; regfile[4][5]   ; rdDataA[5]  ; clk        ;
+; N/A                                     ; None                                                ; 12.531 ns  ; regfile[4][1]   ; rdDataA[1]  ; clk        ;
+; N/A                                     ; None                                                ; 12.524 ns  ; regfile[12][14] ; rdDataA[14] ; clk        ;
+; N/A                                     ; None                                                ; 12.502 ns  ; regfile[1][5]   ; rdDataA[5]  ; clk        ;
+; N/A                                     ; None                                                ; 12.423 ns  ; regfile[1][7]   ; rdDataA[7]  ; clk        ;
+; N/A                                     ; None                                                ; 12.390 ns  ; regfile[1][1]   ; rdDataA[1]  ; clk        ;
+; N/A                                     ; None                                                ; 12.362 ns  ; regfile[9][1]   ; rdDataA[1]  ; clk        ;
+; N/A                                     ; None                                                ; 12.319 ns  ; regfile[28][2]  ; rdDataA[2]  ; clk        ;
+; N/A                                     ; None                                                ; 12.305 ns  ; regfile[28][6]  ; rdDataA[6]  ; clk        ;
+; N/A                                     ; None                                                ; 12.296 ns  ; regfile[20][7]  ; rdDataA[7]  ; clk        ;
+; N/A                                     ; None                                                ; 12.263 ns  ; regfile[10][8]  ; rdDataA[8]  ; clk        ;
+; N/A                                     ; None                                                ; 12.261 ns  ; regfile[12][13] ; rdDataA[13] ; clk        ;
+; N/A                                     ; None                                                ; 12.246 ns  ; regfile[12][5]  ; rdDataA[5]  ; clk        ;
+; N/A                                     ; None                                                ; 12.233 ns  ; regfile[13][1]  ; rdDataA[1]  ; clk        ;
+; N/A                                     ; None                                                ; 12.217 ns  ; regfile[17][14] ; rdDataA[14] ; clk        ;
+; N/A                                     ; None                                                ; 12.210 ns  ; regfile[12][1]  ; rdDataA[1]  ; clk        ;
+; N/A                                     ; None                                                ; 12.168 ns  ; regfile[28][4]  ; rdDataA[4]  ; clk        ;
+; N/A                                     ; None                                                ; 12.166 ns  ; regfile[15][5]  ; rdDataA[5]  ; clk        ;
+; N/A                                     ; None                                                ; 12.159 ns  ; regfile[1][13]  ; rdDataA[13] ; clk        ;
+; N/A                                     ; None                                                ; 12.139 ns  ; regfile[28][3]  ; rdDataA[3]  ; clk        ;
+; N/A                                     ; None                                                ; 12.100 ns  ; regfile[28][10] ; rdDataA[10] ; clk        ;
+; N/A                                     ; None                                                ; 12.096 ns  ; regfile[3][5]   ; rdDataA[5]  ; clk        ;
+; N/A                                     ; None                                                ; 12.049 ns  ; regfile[7][3]   ; rdDataA[3]  ; clk        ;
+; N/A                                     ; None                                                ; 12.027 ns  ; regfile[28][0]  ; rdDataA[0]  ; clk        ;
+; N/A                                     ; None                                                ; 11.984 ns  ; regfile[28][13] ; rdDataA[13] ; clk        ;
+; N/A                                     ; None                                                ; 11.981 ns  ; regfile[12][8]  ; rdDataA[8]  ; clk        ;
+; N/A                                     ; None                                                ; 11.951 ns  ; regfile[3][1]   ; rdDataA[1]  ; clk        ;
+; N/A                                     ; None                                                ; 11.929 ns  ; regfile[15][3]  ; rdDataA[3]  ; clk        ;
+; N/A                                     ; None                                                ; 11.921 ns  ; regfile[26][8]  ; rdDataA[8]  ; clk        ;
+; N/A                                     ; None                                                ; 11.905 ns  ; regfile[15][13] ; rdDataA[13] ; clk        ;
+; N/A                                     ; None                                                ; 11.902 ns  ; regfile[4][9]   ; rdDataA[9]  ; clk        ;
+; N/A                                     ; None                                                ; 11.868 ns  ; regfile[25][3]  ; rdDataA[3]  ; clk        ;
+; N/A                                     ; None                                                ; 11.809 ns  ; regfile[19][14] ; rdDataA[14] ; clk        ;
+; N/A                                     ; None                                                ; 11.807 ns  ; regfile[4][11]  ; rdDataA[11] ; clk        ;
+; N/A                                     ; None                                                ; 11.806 ns  ; regfile[10][6]  ; rdDataA[6]  ; clk        ;
+; N/A                                     ; None                                                ; 11.806 ns  ; regfile[11][3]  ; rdDataA[3]  ; clk        ;
+; N/A                                     ; None                                                ; 11.798 ns  ; regfile[25][15] ; rdDataA[15] ; clk        ;
+; N/A                                     ; None                                                ; 11.779 ns  ; regfile[11][13] ; rdDataA[13] ; clk        ;
+; N/A                                     ; None                                                ; 11.775 ns  ; regfile[3][7]   ; rdDataA[7]  ; clk        ;
+; N/A                                     ; None                                                ; 11.760 ns  ; regfile[11][5]  ; rdDataA[5]  ; clk        ;
+; N/A                                     ; None                                                ; 11.753 ns  ; regfile[3][13]  ; rdDataA[13] ; clk        ;
+; N/A                                     ; None                                                ; 11.752 ns  ; regfile[25][7]  ; rdDataA[7]  ; clk        ;
+; N/A                                     ; None                                                ; 11.733 ns  ; regfile[20][3]  ; rdDataA[3]  ; clk        ;
+; N/A                                     ; None                                                ; 11.715 ns  ; regfile[17][13] ; rdDataA[13] ; clk        ;
+; N/A                                     ; None                                                ; 11.690 ns  ; regfile[4][14]  ; rdDataA[14] ; clk        ;
+; N/A                                     ; None                                                ; 11.668 ns  ; regfile[12][2]  ; rdDataA[2]  ; clk        ;
+; N/A                                     ; None                                                ; 11.643 ns  ; regfile[15][7]  ; rdDataA[7]  ; clk        ;
+; N/A                                     ; None                                                ; 11.643 ns  ; regfile[12][6]  ; rdDataA[6]  ; clk        ;
+; N/A                                     ; None                                                ; 11.643 ns  ; regfile[7][5]   ; rdDataA[5]  ; clk        ;
+; N/A                                     ; None                                                ; 11.643 ns  ; regfile[5][3]   ; rdDataA[3]  ; clk        ;
+; N/A                                     ; None                                                ; 11.621 ns  ; regfile[29][7]  ; rdDataA[7]  ; clk        ;
+; N/A                                     ; None                                                ; 11.569 ns  ; regfile[28][5]  ; rdDataA[5]  ; clk        ;
+; N/A                                     ; None                                                ; 11.567 ns  ; regfile[7][13]  ; rdDataA[13] ; clk        ;
+; N/A                                     ; None                                                ; 11.554 ns  ; regfile[12][4]  ; rdDataA[4]  ; clk        ;
+; N/A                                     ; None                                                ; 11.538 ns  ; regfile[12][10] ; rdDataA[10] ; clk        ;
+; N/A                                     ; None                                                ; 11.524 ns  ; regfile[17][15] ; rdDataA[15] ; clk        ;
+; N/A                                     ; None                                                ; 11.519 ns  ; regfile[17][3]  ; rdDataA[3]  ; clk        ;
+; N/A                                     ; None                                                ; 11.515 ns  ; regfile[11][7]  ; rdDataA[7]  ; clk        ;
+; N/A                                     ; None                                                ; 11.506 ns  ; regfile[12][9]  ; rdDataA[9]  ; clk        ;
+; N/A                                     ; None                                                ; 11.493 ns  ; regfile[12][11] ; rdDataA[11] ; clk        ;
+; N/A                                     ; None                                                ; 11.478 ns  ; regfile[28][1]  ; rdDataA[1]  ; clk        ;
+; N/A                                     ; None                                                ; 11.477 ns  ; regfile[7][1]   ; rdDataA[1]  ; clk        ;
+; N/A                                     ; None                                                ; 11.473 ns  ; regfile[9][9]   ; rdDataA[9]  ; clk        ;
+; N/A                                     ; None                                                ; 11.469 ns  ; regfile[29][3]  ; rdDataA[3]  ; clk        ;
+; N/A                                     ; None                                                ; 11.449 ns  ; regfile[1][10]  ; rdDataA[10] ; clk        ;
+; N/A                                     ; None                                                ; 11.431 ns  ; regfile[28][12] ; rdDataA[12] ; clk        ;
+; N/A                                     ; None                                                ; 11.418 ns  ; regfile[2][4]   ; rdDataA[4]  ; clk        ;
+; N/A                                     ; None                                                ; 11.414 ns  ; regfile[20][13] ; rdDataA[13] ; clk        ;
+; N/A                                     ; None                                                ; 11.410 ns  ; regfile[12][0]  ; rdDataA[0]  ; clk        ;
+; N/A                                     ; None                                                ; 11.405 ns  ; regfile[2][14]  ; rdDataA[14] ; clk        ;
+; N/A                                     ; None                                                ; 11.402 ns  ; regfile[29][15] ; rdDataA[15] ; clk        ;
+; N/A                                     ; None                                                ; 11.390 ns  ; regfile[19][3]  ; rdDataA[3]  ; clk        ;
+; N/A                                     ; None                                                ; 11.385 ns  ; regfile[26][6]  ; rdDataA[6]  ; clk        ;
+; N/A                                     ; None                                                ; 11.365 ns  ; regfile[9][15]  ; rdDataA[15] ; clk        ;
+; N/A                                     ; None                                                ; 11.365 ns  ; regfile[2][12]  ; rdDataA[12] ; clk        ;
+; N/A                                     ; None                                                ; 11.344 ns  ; regfile[13][9]  ; rdDataA[9]  ; clk        ;
+; N/A                                     ; None                                                ; 11.311 ns  ; regfile[19][13] ; rdDataA[13] ; clk        ;
+; N/A                                     ; None                                                ; 11.307 ns  ; regfile[17][10] ; rdDataA[10] ; clk        ;
+; N/A                                     ; None                                                ; 11.304 ns  ; regfile[12][12] ; rdDataA[12] ; clk        ;
+; N/A                                     ; None                                                ; 11.297 ns  ; regfile[7][7]   ; rdDataA[7]  ; clk        ;
+; N/A                                     ; None                                                ; 11.280 ns  ; regfile[4][8]   ; rdDataA[8]  ; clk        ;
+; N/A                                     ; None                                                ; 11.274 ns  ; regfile[1][15]  ; rdDataA[15] ; clk        ;
+; N/A                                     ; None                                                ; 11.257 ns  ; regfile[17][5]  ; rdDataA[5]  ; clk        ;
+; N/A                                     ; None                                                ; 11.249 ns  ; regfile[1][4]   ; rdDataA[4]  ; clk        ;
+; N/A                                     ; None                                                ; 11.247 ns  ; regfile[15][1]  ; rdDataA[1]  ; clk        ;
+; N/A                                     ; None                                                ; 11.236 ns  ; regfile[13][15] ; rdDataA[15] ; clk        ;
+; N/A                                     ; None                                                ; 11.217 ns  ; regfile[4][15]  ; rdDataA[15] ; clk        ;
+; N/A                                     ; None                                                ; 11.215 ns  ; regfile[17][7]  ; rdDataA[7]  ; clk        ;
+; N/A                                     ; None                                                ; 11.205 ns  ; regfile[5][5]   ; rdDataA[5]  ; clk        ;
+; N/A                                     ; None                                                ; 11.167 ns  ; regfile[5][13]  ; rdDataA[13] ; clk        ;
+; N/A                                     ; None                                                ; 11.159 ns  ; regfile[28][11] ; rdDataA[11] ; clk        ;
+; N/A                                     ; None                                                ; 11.133 ns  ; regfile[20][5]  ; rdDataA[5]  ; clk        ;
+; N/A                                     ; None                                                ; 11.128 ns  ; regfile[25][13] ; rdDataA[13] ; clk        ;
+; N/A                                     ; None                                                ; 11.122 ns  ; regfile[19][5]  ; rdDataA[5]  ; clk        ;
+; N/A                                     ; None                                                ; 11.121 ns  ; regfile[11][1]  ; rdDataA[1]  ; clk        ;
+; N/A                                     ; None                                                ; 11.099 ns  ; regfile[17][8]  ; rdDataA[8]  ; clk        ;
+; N/A                                     ; None                                                ; 11.086 ns  ; regfile[19][15] ; rdDataA[15] ; clk        ;
+; N/A                                     ; None                                                ; 11.078 ns  ; regfile[20][1]  ; rdDataA[1]  ; clk        ;
+; N/A                                     ; None                                                ; 11.065 ns  ; regfile[5][1]   ; rdDataA[1]  ; clk        ;
+; N/A                                     ; None                                                ; 11.057 ns  ; regfile[25][5]  ; rdDataA[5]  ; clk        ;
+; N/A                                     ; None                                                ; 11.003 ns  ; regfile[10][14] ; rdDataA[14] ; clk        ;
+; N/A                                     ; None                                                ; 11.002 ns  ; regfile[31][5]  ; rdDataA[5]  ; clk        ;
+; N/A                                     ; None                                                ; 10.999 ns  ; regfile[29][13] ; rdDataA[13] ; clk        ;
+; N/A                                     ; None                                                ; 10.996 ns  ; regfile[18][8]  ; rdDataA[8]  ; clk        ;
+; N/A                                     ; None                                                ; 10.993 ns  ; regfile[4][6]   ; rdDataA[6]  ; clk        ;
+; N/A                                     ; None                                                ; 10.992 ns  ; regfile[20][14] ; rdDataA[14] ; clk        ;
+; N/A                                     ; None                                                ; 10.983 ns  ; regfile[4][2]   ; rdDataA[2]  ; clk        ;
+; N/A                                     ; None                                                ; 10.964 ns  ; regfile[10][12] ; rdDataA[12] ; clk        ;
+; N/A                                     ; None                                                ; 10.956 ns  ; regfile[1][8]   ; rdDataA[8]  ; clk        ;
+; N/A                                     ; None                                                ; 10.948 ns  ; regfile[9][10]  ; rdDataA[10] ; clk        ;
+; N/A                                     ; None                                                ; 10.928 ns  ; regfile[29][5]  ; rdDataA[5]  ; clk        ;
+; N/A                                     ; None                                                ; 10.915 ns  ; regfile[1][0]   ; rdDataA[0]  ; clk        ;
+; N/A                                     ; None                                                ; 10.905 ns  ; regfile[12][15] ; rdDataA[15] ; clk        ;
+; N/A                                     ; None                                                ; 10.904 ns  ; regfile[17][1]  ; rdDataA[1]  ; clk        ;
+; N/A                                     ; None                                                ; 10.902 ns  ; regfile[19][10] ; rdDataA[10] ; clk        ;
+; N/A                                     ; None                                                ; 10.898 ns  ; regfile[28][15] ; rdDataA[15] ; clk        ;
+; N/A                                     ; None                                                ; 10.885 ns  ; regfile[5][7]   ; rdDataA[7]  ; clk        ;
+; N/A                                     ; None                                                ; 10.873 ns  ; regfile[23][5]  ; rdDataA[5]  ; clk        ;
+; N/A                                     ; None                                                ; 10.870 ns  ; regfile[26][14] ; rdDataA[14] ; clk        ;
+; N/A                                     ; None                                                ; 10.856 ns  ; regfile[4][10]  ; rdDataA[10] ; clk        ;
+; N/A                                     ; None                                                ; 10.851 ns  ; regfile[3][4]   ; rdDataA[4]  ; clk        ;
+; N/A                                     ; None                                                ; 10.849 ns  ; regfile[16][2]  ; rdDataA[2]  ; clk        ;
+; N/A                                     ; None                                                ; 10.844 ns  ; regfile[17][6]  ; rdDataA[6]  ; clk        ;
+; N/A                                     ; None                                                ; 10.840 ns  ; regfile[9][11]  ; rdDataA[11] ; clk        ;
+; N/A                                     ; None                                                ; 10.835 ns  ; regfile[3][15]  ; rdDataA[15] ; clk        ;
+; N/A                                     ; None                                                ; 10.834 ns  ; regfile[26][4]  ; rdDataA[4]  ; clk        ;
+; N/A                                     ; None                                                ; 10.831 ns  ; regfile[15][15] ; rdDataA[15] ; clk        ;
+; N/A                                     ; None                                                ; 10.831 ns  ; regfile[10][4]  ; rdDataA[4]  ; clk        ;
+; N/A                                     ; None                                                ; 10.822 ns  ; regfile[23][1]  ; rdDataA[1]  ; clk        ;
+; N/A                                     ; None                                                ; 10.819 ns  ; regfile[13][10] ; rdDataA[10] ; clk        ;
+; N/A                                     ; None                                                ; 10.816 ns  ; regfile[25][10] ; rdDataA[10] ; clk        ;
+; N/A                                     ; None                                                ; 10.815 ns  ; regfile[19][7]  ; rdDataA[7]  ; clk        ;
+; N/A                                     ; None                                                ; 10.798 ns  ; regfile[17][11] ; rdDataA[11] ; clk        ;
+; N/A                                     ; None                                                ; 10.784 ns  ; regfile[17][0]  ; rdDataA[0]  ; clk        ;
+; N/A                                     ; None                                                ; 10.784 ns  ; regfile[5][0]   ; rdDataA[0]  ; clk        ;
+; N/A                                     ; None                                                ; 10.782 ns  ; regfile[7][0]   ; rdDataA[0]  ; clk        ;
+; N/A                                     ; None                                                ; 10.775 ns  ; regfile[19][1]  ; rdDataA[1]  ; clk        ;
+; N/A                                     ; None                                                ; 10.768 ns  ; regfile[16][15] ; rdDataA[15] ; clk        ;
+; N/A                                     ; None                                                ; 10.763 ns  ; regfile[25][11] ; rdDataA[11] ; clk        ;
+; N/A                                     ; None                                                ; 10.760 ns  ; regfile[4][0]   ; rdDataA[0]  ; clk        ;
+; N/A                                     ; None                                                ; 10.754 ns  ; regfile[25][14] ; rdDataA[14] ; clk        ;
+; N/A                                     ; None                                                ; 10.732 ns  ; regfile[2][10]  ; rdDataA[10] ; clk        ;
+; N/A                                     ; None                                                ; 10.727 ns  ; regfile[28][9]  ; rdDataA[9]  ; clk        ;
+; N/A                                     ; None                                                ; 10.709 ns  ; regfile[19][6]  ; rdDataA[6]  ; clk        ;
+; N/A                                     ; None                                                ; 10.703 ns  ; regfile[18][6]  ; rdDataA[6]  ; clk        ;
+; N/A                                     ; None                                                ; 10.697 ns  ; regfile[4][12]  ; rdDataA[12] ; clk        ;
+; N/A                                     ; None                                                ; 10.691 ns  ; regfile[1][11]  ; rdDataA[11] ; clk        ;
+; N/A                                     ; None                                                ; 10.688 ns  ; regfile[29][10] ; rdDataA[10] ; clk        ;
+; N/A                                     ; None                                                ; 10.678 ns  ; regfile[4][4]   ; rdDataA[4]  ; clk        ;
+; N/A                                     ; None                                                ; 10.665 ns  ; regfile[7][15]  ; rdDataA[15] ; clk        ;
+; N/A                                     ; None                                                ; 10.662 ns  ; regfile[19][8]  ; rdDataA[8]  ; clk        ;
+; N/A                                     ; None                                                ; 10.655 ns  ; regfile[19][0]  ; rdDataA[0]  ; clk        ;
+; N/A                                     ; None                                                ; 10.641 ns  ; regfile[17][9]  ; rdDataA[9]  ; clk        ;
+; N/A                                     ; None                                                ; 10.637 ns  ; regfile[1][12]  ; rdDataA[12] ; clk        ;
+; N/A                                     ; None                                                ; 10.631 ns  ; regfile[23][3]  ; rdDataA[3]  ; clk        ;
+; N/A                                     ; None                                                ; 10.624 ns  ; regfile[29][14] ; rdDataA[14] ; clk        ;
+; N/A                                     ; None                                                ; 10.618 ns  ; regfile[3][10]  ; rdDataA[10] ; clk        ;
+; N/A                                     ; None                                                ; 10.612 ns  ; regfile[23][14] ; rdDataA[14] ; clk        ;
+; N/A                                     ; None                                                ; 10.606 ns  ; regfile[10][10] ; rdDataA[10] ; clk        ;
+; N/A                                     ; None                                                ; 10.603 ns  ; regfile[1][9]   ; rdDataA[9]  ; clk        ;
+; N/A                                     ; None                                                ; 10.599 ns  ; regfile[20][11] ; rdDataA[11] ; clk        ;
+; N/A                                     ; None                                                ; 10.596 ns  ; regfile[20][9]  ; rdDataA[9]  ; clk        ;
+; N/A                                     ; None                                                ; 10.588 ns  ; regfile[17][4]  ; rdDataA[4]  ; clk        ;
+; N/A                                     ; None                                                ; 10.552 ns  ; regfile[23][13] ; rdDataA[13] ; clk        ;
+; N/A                                     ; None                                                ; 10.546 ns  ; regfile[31][13] ; rdDataA[13] ; clk        ;
+; N/A                                     ; None                                                ; 10.522 ns  ; regfile[3][8]   ; rdDataA[8]  ; clk        ;
+; N/A                                     ; None                                                ; 10.503 ns  ; regfile[21][3]  ; rdDataA[3]  ; clk        ;
+; N/A                                     ; None                                                ; 10.493 ns  ; regfile[1][6]   ; rdDataA[6]  ; clk        ;
+; N/A                                     ; None                                                ; 10.469 ns  ; regfile[20][8]  ; rdDataA[8]  ; clk        ;
+; N/A                                     ; None                                                ; 10.466 ns  ; regfile[18][14] ; rdDataA[14] ; clk        ;
+; N/A                                     ; None                                                ; 10.464 ns  ; regfile[31][3]  ; rdDataA[3]  ; clk        ;
+; N/A                                     ; None                                                ; 10.457 ns  ; regfile[19][4]  ; rdDataA[4]  ; clk        ;
+; N/A                                     ; None                                                ; 10.444 ns  ; regfile[13][11] ; rdDataA[11] ; clk        ;
+; N/A                                     ; None                                                ; 10.423 ns  ; regfile[21][13] ; rdDataA[13] ; clk        ;
+; N/A                                     ; None                                                ; 10.421 ns  ; regfile[26][10] ; rdDataA[10] ; clk        ;
+; N/A                                     ; None                                                ; 10.408 ns  ; regfile[23][10] ; rdDataA[10] ; clk        ;
+; N/A                                     ; None                                                ; 10.406 ns  ; regfile[1][2]   ; rdDataA[2]  ; clk        ;
+; N/A                                     ; None                                                ; 10.403 ns  ; regfile[17][12] ; rdDataA[12] ; clk        ;
+; N/A                                     ; None                                                ; 10.399 ns  ; regfile[19][11] ; rdDataA[11] ; clk        ;
+; N/A                                     ; None                                                ; 10.390 ns  ; regfile[11][15] ; rdDataA[15] ; clk        ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;            ;                 ;             ;            ;
++-----------------------------------------+-----------------------------------------------------+------------+-----------------+-------------+------------+
+
+
++-----------------------------------------------------------------------+
+; tpd                                                                   ;
++-------+-------------------+-----------------+-----------+-------------+
+; Slack ; Required P2P Time ; Actual P2P Time ; From      ; To          ;
++-------+-------------------+-----------------+-----------+-------------+
+; N/A   ; None              ; 17.670 ns       ; instr[19] ; rdDataA[7]  ;
+; N/A   ; None              ; 17.606 ns       ; instr[17] ; rdDataA[13] ;
+; N/A   ; None              ; 17.516 ns       ; instr[18] ; rdDataA[7]  ;
+; N/A   ; None              ; 17.470 ns       ; instr[16] ; rdDataA[13] ;
+; N/A   ; None              ; 17.319 ns       ; instr[17] ; rdDataA[14] ;
+; N/A   ; None              ; 17.172 ns       ; instr[16] ; rdDataA[3]  ;
+; N/A   ; None              ; 17.141 ns       ; instr[16] ; rdDataA[5]  ;
+; N/A   ; None              ; 17.092 ns       ; instr[19] ; rdDataA[3]  ;
+; N/A   ; None              ; 17.046 ns       ; instr[17] ; rdDataA[5]  ;
+; N/A   ; None              ; 16.963 ns       ; instr[18] ; rdDataA[3]  ;
+; N/A   ; None              ; 16.893 ns       ; instr[16] ; rdDataA[7]  ;
+; N/A   ; None              ; 16.839 ns       ; instr[19] ; rdDataA[14] ;
+; N/A   ; None              ; 16.825 ns       ; instr[17] ; rdDataA[3]  ;
+; N/A   ; None              ; 16.796 ns       ; instr[17] ; rdDataA[7]  ;
+; N/A   ; None              ; 16.770 ns       ; instr[17] ; rdDataA[2]  ;
+; N/A   ; None              ; 16.744 ns       ; instr[18] ; rdDataA[14] ;
+; N/A   ; None              ; 16.632 ns       ; instr[18] ; rdDataA[8]  ;
+; N/A   ; None              ; 16.500 ns       ; instr[16] ; rdDataA[1]  ;
+; N/A   ; None              ; 16.491 ns       ; instr[19] ; rdDataA[13] ;
+; N/A   ; None              ; 16.480 ns       ; instr[19] ; rdDataA[5]  ;
+; N/A   ; None              ; 16.448 ns       ; instr[19] ; rdDataA[1]  ;
+; N/A   ; None              ; 16.404 ns       ; instr[17] ; rdDataA[1]  ;
+; N/A   ; None              ; 16.352 ns       ; instr[18] ; rdDataA[13] ;
+; N/A   ; None              ; 16.333 ns       ; instr[18] ; rdDataA[5]  ;
+; N/A   ; None              ; 16.327 ns       ; instr[17] ; rdDataA[12] ;
+; N/A   ; None              ; 16.307 ns       ; instr[18] ; rdDataA[6]  ;
+; N/A   ; None              ; 16.293 ns       ; instr[19] ; rdDataA[8]  ;
+; N/A   ; None              ; 16.293 ns       ; instr[19] ; rdDataA[2]  ;
+; N/A   ; None              ; 16.287 ns       ; instr[18] ; rdDataA[1]  ;
+; N/A   ; None              ; 16.191 ns       ; instr[18] ; rdDataA[2]  ;
+; N/A   ; None              ; 16.166 ns       ; instr[17] ; rdDataA[8]  ;
+; N/A   ; None              ; 16.056 ns       ; instr[19] ; rdDataA[6]  ;
+; N/A   ; None              ; 16.005 ns       ; instr[17] ; rdDataA[9]  ;
+; N/A   ; None              ; 15.894 ns       ; instr[17] ; rdDataA[15] ;
+; N/A   ; None              ; 15.881 ns       ; instr[17] ; rdDataA[6]  ;
+; N/A   ; None              ; 15.872 ns       ; instr[16] ; rdDataA[9]  ;
+; N/A   ; None              ; 15.847 ns       ; instr[19] ; rdDataA[12] ;
+; N/A   ; None              ; 15.767 ns       ; instr[16] ; rdDataA[15] ;
+; N/A   ; None              ; 15.752 ns       ; instr[18] ; rdDataA[12] ;
+; N/A   ; None              ; 15.745 ns       ; instr[17] ; rdDataA[10] ;
+; N/A   ; None              ; 15.740 ns       ; instr[18] ; rdDataA[4]  ;
+; N/A   ; None              ; 15.729 ns       ; instr[19] ; rdDataA[11] ;
+; N/A   ; None              ; 15.726 ns       ; instr[18] ; rdDataA[10] ;
+; N/A   ; None              ; 15.695 ns       ; instr[18] ; rdDataA[9]  ;
+; N/A   ; None              ; 15.647 ns       ; instr[17] ; rdDataA[0]  ;
+; N/A   ; None              ; 15.589 ns       ; instr[18] ; rdDataA[0]  ;
+; N/A   ; None              ; 15.573 ns       ; instr[18] ; rdDataA[11] ;
+; N/A   ; None              ; 15.563 ns       ; instr[17] ; rdDataA[4]  ;
+; N/A   ; None              ; 15.497 ns       ; instr[19] ; rdDataA[10] ;
+; N/A   ; None              ; 15.346 ns       ; instr[16] ; rdDataA[10] ;
+; N/A   ; None              ; 15.248 ns       ; instr[19] ; rdDataA[4]  ;
+; N/A   ; None              ; 15.196 ns       ; instr[19] ; rdDataA[9]  ;
+; N/A   ; None              ; 15.167 ns       ; instr[19] ; rdDataA[0]  ;
+; N/A   ; None              ; 15.142 ns       ; instr[16] ; rdDataA[14] ;
+; N/A   ; None              ; 15.130 ns       ; instr[19] ; rdDataA[15] ;
+; N/A   ; None              ; 15.094 ns       ; instr[17] ; rdDataA[11] ;
+; N/A   ; None              ; 14.999 ns       ; instr[18] ; rdDataA[15] ;
+; N/A   ; None              ; 14.948 ns       ; instr[16] ; rdDataA[11] ;
+; N/A   ; None              ; 14.592 ns       ; instr[16] ; rdDataA[8]  ;
+; N/A   ; None              ; 14.496 ns       ; instr[16] ; rdDataA[4]  ;
+; N/A   ; None              ; 14.472 ns       ; instr[16] ; rdDataA[0]  ;
+; N/A   ; None              ; 14.368 ns       ; instr[16] ; rdDataA[6]  ;
+; N/A   ; None              ; 14.330 ns       ; instr[16] ; rdDataA[12] ;
+; N/A   ; None              ; 14.074 ns       ; instr[15] ; rdDataA[14] ;
+; N/A   ; None              ; 14.023 ns       ; instr[16] ; rdDataA[2]  ;
+; N/A   ; None              ; 13.791 ns       ; instr[15] ; rdDataA[12] ;
+; N/A   ; None              ; 13.731 ns       ; instr[15] ; rdDataA[4]  ;
+; N/A   ; None              ; 13.597 ns       ; instr[15] ; rdDataA[2]  ;
+; N/A   ; None              ; 13.438 ns       ; instr[15] ; rdDataA[0]  ;
+; N/A   ; None              ; 13.374 ns       ; instr[15] ; rdDataA[6]  ;
+; N/A   ; None              ; 13.336 ns       ; instr[15] ; rdDataA[3]  ;
+; N/A   ; None              ; 13.318 ns       ; instr[15] ; rdDataA[8]  ;
+; N/A   ; None              ; 13.200 ns       ; instr[15] ; rdDataA[10] ;
+; N/A   ; None              ; 13.173 ns       ; instr[15] ; rdDataA[13] ;
+; N/A   ; None              ; 13.018 ns       ; instr[15] ; rdDataA[9]  ;
+; N/A   ; None              ; 12.995 ns       ; instr[15] ; rdDataA[11] ;
+; N/A   ; None              ; 12.902 ns       ; instr[15] ; rdDataA[5]  ;
+; N/A   ; None              ; 12.893 ns       ; instr[15] ; rdDataA[7]  ;
+; N/A   ; None              ; 12.695 ns       ; instr[15] ; rdDataA[15] ;
+; N/A   ; None              ; 12.646 ns       ; instr[15] ; rdDataA[1]  ;
++-------+-------------------+-----------------+-----------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; th                                                                                                                                                   ;
++-----------------------------------------+-----------------------------------------------------+-----------+-------------+-----------------+----------+
+; Minimum Slack                           ; Required th                                         ; Actual th ; From        ; To              ; To Clock ;
++-----------------------------------------+-----------------------------------------------------+-----------+-------------+-----------------+----------+
+; N/A                                     ; None                                                ; 0.482 ns  ; wrDataD[8]  ; regfile[11][8]  ; clk      ;
+; N/A                                     ; None                                                ; 0.414 ns  ; wrDataD[6]  ; regfile[11][6]  ; clk      ;
+; N/A                                     ; None                                                ; 0.168 ns  ; wrDataD[9]  ; regfile[10][9]  ; clk      ;
+; N/A                                     ; None                                                ; 0.164 ns  ; wrDataD[7]  ; regfile[6][7]   ; clk      ;
+; N/A                                     ; None                                                ; -0.060 ns ; wrDataD[8]  ; regfile[15][8]  ; clk      ;
+; N/A                                     ; None                                                ; -0.129 ns ; wrDataD[6]  ; regfile[15][6]  ; clk      ;
+; N/A                                     ; None                                                ; -0.482 ns ; wrDataD[6]  ; regfile[9][6]   ; clk      ;
+; N/A                                     ; None                                                ; -0.528 ns ; wrDataD[8]  ; regfile[9][8]   ; clk      ;
+; N/A                                     ; None                                                ; -0.531 ns ; wrDataD[8]  ; regfile[13][8]  ; clk      ;
+; N/A                                     ; None                                                ; -0.619 ns ; wrDataD[6]  ; regfile[13][6]  ; clk      ;
+; N/A                                     ; None                                                ; -0.663 ns ; wrDataD[8]  ; regfile[28][8]  ; clk      ;
+; N/A                                     ; None                                                ; -0.705 ns ; wrDataD[9]  ; regfile[2][9]   ; clk      ;
+; N/A                                     ; None                                                ; -0.736 ns ; wrDataD[7]  ; regfile[30][7]  ; clk      ;
+; N/A                                     ; None                                                ; -0.792 ns ; wrDataD[8]  ; regfile[18][8]  ; clk      ;
+; N/A                                     ; None                                                ; -0.826 ns ; wrDataD[8]  ; regfile[6][8]   ; clk      ;
+; N/A                                     ; None                                                ; -0.829 ns ; wrDataD[8]  ; regfile[14][8]  ; clk      ;
+; N/A                                     ; None                                                ; -0.837 ns ; wrDataD[7]  ; regfile[3][7]   ; clk      ;
+; N/A                                     ; None                                                ; -0.840 ns ; wrDataD[7]  ; regfile[5][7]   ; clk      ;
+; N/A                                     ; None                                                ; -0.843 ns ; wrDataD[7]  ; regfile[7][7]   ; clk      ;
+; N/A                                     ; None                                                ; -0.851 ns ; wrDataD[8]  ; regfile[20][8]  ; clk      ;
+; N/A                                     ; None                                                ; -0.857 ns ; wrDataD[7]  ; regfile[27][7]  ; clk      ;
+; N/A                                     ; None                                                ; -0.858 ns ; wrDataD[7]  ; regfile[31][7]  ; clk      ;
+; N/A                                     ; None                                                ; -0.862 ns ; wrDataD[8]  ; regfile[16][8]  ; clk      ;
+; N/A                                     ; None                                                ; -0.874 ns ; wrDataD[8]  ; regfile[12][8]  ; clk      ;
+; N/A                                     ; None                                                ; -0.874 ns ; wrDataD[8]  ; regfile[4][8]   ; clk      ;
+; N/A                                     ; None                                                ; -0.895 ns ; wrDataD[9]  ; regfile[29][9]  ; clk      ;
+; N/A                                     ; None                                                ; -0.897 ns ; wrDataD[9]  ; regfile[25][9]  ; clk      ;
+; N/A                                     ; None                                                ; -0.906 ns ; wrDataD[6]  ; regfile[10][6]  ; clk      ;
+; N/A                                     ; None                                                ; -0.931 ns ; wrDataD[7]  ; regfile[18][7]  ; clk      ;
+; N/A                                     ; None                                                ; -0.933 ns ; wrDataD[7]  ; regfile[2][7]   ; clk      ;
+; N/A                                     ; None                                                ; -0.968 ns ; wrDataD[7]  ; regfile[1][7]   ; clk      ;
+; N/A                                     ; None                                                ; -0.983 ns ; wrDataD[6]  ; regfile[25][6]  ; clk      ;
+; N/A                                     ; None                                                ; -0.984 ns ; wrDataD[6]  ; regfile[29][6]  ; clk      ;
+; N/A                                     ; None                                                ; -1.031 ns ; wrDataD[9]  ; regfile[30][9]  ; clk      ;
+; N/A                                     ; None                                                ; -1.039 ns ; wrDataD[9]  ; regfile[31][9]  ; clk      ;
+; N/A                                     ; None                                                ; -1.039 ns ; wrDataD[6]  ; regfile[28][6]  ; clk      ;
+; N/A                                     ; None                                                ; -1.042 ns ; wrDataD[7]  ; regfile[9][7]   ; clk      ;
+; N/A                                     ; None                                                ; -1.054 ns ; wrDataD[7]  ; regfile[25][7]  ; clk      ;
+; N/A                                     ; None                                                ; -1.082 ns ; wrDataD[8]  ; regfile[10][8]  ; clk      ;
+; N/A                                     ; None                                                ; -1.082 ns ; wrDataD[8]  ; regfile[2][8]   ; clk      ;
+; N/A                                     ; None                                                ; -1.102 ns ; wrDataD[9]  ; regfile[13][9]  ; clk      ;
+; N/A                                     ; None                                                ; -1.102 ns ; wrDataD[9]  ; regfile[9][9]   ; clk      ;
+; N/A                                     ; None                                                ; -1.110 ns ; wrDataD[8]  ; regfile[30][8]  ; clk      ;
+; N/A                                     ; None                                                ; -1.114 ns ; wrDataD[8]  ; regfile[8][8]   ; clk      ;
+; N/A                                     ; None                                                ; -1.114 ns ; wrDataD[8]  ; regfile[24][8]  ; clk      ;
+; N/A                                     ; None                                                ; -1.130 ns ; wrDataD[7]  ; regfile[13][7]  ; clk      ;
+; N/A                                     ; None                                                ; -1.132 ns ; wrDataD[7]  ; regfile[22][7]  ; clk      ;
+; N/A                                     ; None                                                ; -1.138 ns ; wrDataD[8]  ; regfile[21][8]  ; clk      ;
+; N/A                                     ; None                                                ; -1.141 ns ; wrDataD[8]  ; regfile[23][8]  ; clk      ;
+; N/A                                     ; None                                                ; -1.170 ns ; wrDataD[9]  ; regfile[24][9]  ; clk      ;
+; N/A                                     ; None                                                ; -1.170 ns ; wrDataD[7]  ; regfile[19][7]  ; clk      ;
+; N/A                                     ; None                                                ; -1.170 ns ; wrDataD[7]  ; regfile[11][7]  ; clk      ;
+; N/A                                     ; None                                                ; -1.171 ns ; wrDataD[7]  ; regfile[17][7]  ; clk      ;
+; N/A                                     ; None                                                ; -1.171 ns ; wrDataD[7]  ; regfile[15][7]  ; clk      ;
+; N/A                                     ; None                                                ; -1.180 ns ; wrDataD[7]  ; regfile[29][7]  ; clk      ;
+; N/A                                     ; None                                                ; -1.183 ns ; wrDataD[9]  ; regfile[4][9]   ; clk      ;
+; N/A                                     ; None                                                ; -1.184 ns ; wrDataD[9]  ; regfile[12][9]  ; clk      ;
+; N/A                                     ; None                                                ; -1.188 ns ; wrDataD[9]  ; regfile[21][9]  ; clk      ;
+; N/A                                     ; None                                                ; -1.188 ns ; wrDataD[9]  ; regfile[23][9]  ; clk      ;
+; N/A                                     ; None                                                ; -1.208 ns ; wrDataD[6]  ; regfile[3][6]   ; clk      ;
+; N/A                                     ; None                                                ; -1.209 ns ; wrDataD[6]  ; regfile[1][6]   ; clk      ;
+; N/A                                     ; None                                                ; -1.215 ns ; wrDataD[6]  ; regfile[23][6]  ; clk      ;
+; N/A                                     ; None                                                ; -1.216 ns ; wrDataD[7]  ; regfile[21][7]  ; clk      ;
+; N/A                                     ; None                                                ; -1.216 ns ; wrDataD[7]  ; regfile[23][7]  ; clk      ;
+; N/A                                     ; None                                                ; -1.217 ns ; wrDataD[6]  ; regfile[21][6]  ; clk      ;
+; N/A                                     ; None                                                ; -1.277 ns ; wrDataD[6]  ; regfile[31][6]  ; clk      ;
+; N/A                                     ; None                                                ; -1.278 ns ; wrDataD[6]  ; regfile[27][6]  ; clk      ;
+; N/A                                     ; None                                                ; -1.279 ns ; wrDataD[8]  ; regfile[22][8]  ; clk      ;
+; N/A                                     ; None                                                ; -1.291 ns ; wrDataD[6]  ; regfile[12][6]  ; clk      ;
+; N/A                                     ; None                                                ; -1.291 ns ; wrDataD[6]  ; regfile[4][6]   ; clk      ;
+; N/A                                     ; None                                                ; -1.299 ns ; wrDataD[6]  ; regfile[30][6]  ; clk      ;
+; N/A                                     ; None                                                ; -1.300 ns ; wrDataD[6]  ; regfile[14][6]  ; clk      ;
+; N/A                                     ; None                                                ; -1.331 ns ; wrDataD[6]  ; regfile[22][6]  ; clk      ;
+; N/A                                     ; None                                                ; -1.334 ns ; wrDataD[6]  ; regfile[6][6]   ; clk      ;
+; N/A                                     ; None                                                ; -1.362 ns ; wrDataD[8]  ; regfile[1][8]   ; clk      ;
+; N/A                                     ; None                                                ; -1.364 ns ; wrDataD[8]  ; regfile[3][8]   ; clk      ;
+; N/A                                     ; None                                                ; -1.364 ns ; wrDataD[7]  ; regfile[26][7]  ; clk      ;
+; N/A                                     ; None                                                ; -1.370 ns ; wrDataD[8]  ; regfile[5][8]   ; clk      ;
+; N/A                                     ; None                                                ; -1.371 ns ; wrDataD[8]  ; regfile[7][8]   ; clk      ;
+; N/A                                     ; None                                                ; -1.382 ns ; wrDataD[9]  ; regfile[28][9]  ; clk      ;
+; N/A                                     ; None                                                ; -1.386 ns ; wrDataD[9]  ; regfile[20][9]  ; clk      ;
+; N/A                                     ; None                                                ; -1.390 ns ; wrDataD[8]  ; regfile[27][8]  ; clk      ;
+; N/A                                     ; None                                                ; -1.391 ns ; wrDataD[8]  ; regfile[31][8]  ; clk      ;
+; N/A                                     ; None                                                ; -1.394 ns ; wrDataD[8]  ; regfile[26][8]  ; clk      ;
+; N/A                                     ; None                                                ; -1.403 ns ; wrDataD[7]  ; regfile[16][7]  ; clk      ;
+; N/A                                     ; None                                                ; -1.412 ns ; wrDataD[8]  ; regfile[29][8]  ; clk      ;
+; N/A                                     ; None                                                ; -1.412 ns ; wrDataD[8]  ; regfile[25][8]  ; clk      ;
+; N/A                                     ; None                                                ; -1.445 ns ; wrDataD[6]  ; regfile[16][6]  ; clk      ;
+; N/A                                     ; None                                                ; -1.459 ns ; wrDataD[7]  ; regfile[10][7]  ; clk      ;
+; N/A                                     ; None                                                ; -1.469 ns ; wrDataD[9]  ; regfile[26][9]  ; clk      ;
+; N/A                                     ; None                                                ; -1.470 ns ; wrDataD[9]  ; regfile[22][9]  ; clk      ;
+; N/A                                     ; None                                                ; -1.488 ns ; wrDataD[6]  ; regfile[19][6]  ; clk      ;
+; N/A                                     ; None                                                ; -1.490 ns ; wrDataD[6]  ; regfile[17][6]  ; clk      ;
+; N/A                                     ; None                                                ; -1.491 ns ; wrDataD[7]  ; regfile[8][7]   ; clk      ;
+; N/A                                     ; None                                                ; -1.493 ns ; wrDataD[9]  ; regfile[17][9]  ; clk      ;
+; N/A                                     ; None                                                ; -1.494 ns ; wrDataD[9]  ; regfile[19][9]  ; clk      ;
+; N/A                                     ; None                                                ; -1.495 ns ; wrDataD[7]  ; regfile[24][7]  ; clk      ;
+; N/A                                     ; None                                                ; -1.532 ns ; wrDataD[6]  ; regfile[20][6]  ; clk      ;
+; N/A                                     ; None                                                ; -1.544 ns ; wrDataD[8]  ; regfile[19][8]  ; clk      ;
+; N/A                                     ; None                                                ; -1.544 ns ; wrDataD[8]  ; regfile[17][8]  ; clk      ;
+; N/A                                     ; None                                                ; -1.573 ns ; wrDataD[9]  ; regfile[5][9]   ; clk      ;
+; N/A                                     ; None                                                ; -1.575 ns ; wrDataD[9]  ; regfile[7][9]   ; clk      ;
+; N/A                                     ; None                                                ; -1.620 ns ; wrDataD[9]  ; regfile[18][9]  ; clk      ;
+; N/A                                     ; None                                                ; -1.645 ns ; wrDataD[9]  ; regfile[6][9]   ; clk      ;
+; N/A                                     ; None                                                ; -1.648 ns ; wrDataD[7]  ; regfile[4][7]   ; clk      ;
+; N/A                                     ; None                                                ; -1.650 ns ; wrDataD[9]  ; regfile[14][9]  ; clk      ;
+; N/A                                     ; None                                                ; -1.658 ns ; wrDataD[9]  ; regfile[27][9]  ; clk      ;
+; N/A                                     ; None                                                ; -1.679 ns ; wrDataD[9]  ; regfile[16][9]  ; clk      ;
+; N/A                                     ; None                                                ; -1.680 ns ; wrDataD[9]  ; regfile[8][9]   ; clk      ;
+; N/A                                     ; None                                                ; -1.688 ns ; wrDataD[7]  ; regfile[20][7]  ; clk      ;
+; N/A                                     ; None                                                ; -1.692 ns ; wrDataD[7]  ; regfile[28][7]  ; clk      ;
+; N/A                                     ; None                                                ; -1.706 ns ; wrDataD[7]  ; regfile[14][7]  ; clk      ;
+; N/A                                     ; None                                                ; -1.719 ns ; wrDataD[6]  ; regfile[2][6]   ; clk      ;
+; N/A                                     ; None                                                ; -1.738 ns ; wrDataD[6]  ; regfile[26][6]  ; clk      ;
+; N/A                                     ; None                                                ; -1.834 ns ; wrDataD[6]  ; regfile[8][6]   ; clk      ;
+; N/A                                     ; None                                                ; -1.837 ns ; wrDataD[6]  ; regfile[24][6]  ; clk      ;
+; N/A                                     ; None                                                ; -1.862 ns ; wrDataD[7]  ; regfile[12][7]  ; clk      ;
+; N/A                                     ; None                                                ; -1.865 ns ; wrDataD[9]  ; regfile[11][9]  ; clk      ;
+; N/A                                     ; None                                                ; -1.866 ns ; wrDataD[9]  ; regfile[15][9]  ; clk      ;
+; N/A                                     ; None                                                ; -1.881 ns ; wrDataD[9]  ; regfile[3][9]   ; clk      ;
+; N/A                                     ; None                                                ; -1.882 ns ; wrDataD[6]  ; regfile[5][6]   ; clk      ;
+; N/A                                     ; None                                                ; -1.882 ns ; wrDataD[6]  ; regfile[7][6]   ; clk      ;
+; N/A                                     ; None                                                ; -1.884 ns ; wrDataD[9]  ; regfile[1][9]   ; clk      ;
+; N/A                                     ; None                                                ; -1.920 ns ; wrDataD[6]  ; regfile[18][6]  ; clk      ;
+; N/A                                     ; None                                                ; -3.487 ns ; wrDataD[0]  ; regfile[22][0]  ; clk      ;
+; N/A                                     ; None                                                ; -3.546 ns ; wrDataD[3]  ; regfile[22][3]  ; clk      ;
+; N/A                                     ; None                                                ; -3.553 ns ; wrDataD[12] ; regfile[11][12] ; clk      ;
+; N/A                                     ; None                                                ; -3.566 ns ; wrDataD[10] ; regfile[11][10] ; clk      ;
+; N/A                                     ; None                                                ; -3.626 ns ; wrDataD[1]  ; regfile[22][1]  ; clk      ;
+; N/A                                     ; None                                                ; -3.715 ns ; wrDataD[15] ; regfile[16][15] ; clk      ;
+; N/A                                     ; None                                                ; -3.726 ns ; wrDataD[4]  ; regfile[11][4]  ; clk      ;
+; N/A                                     ; None                                                ; -3.755 ns ; wrDataD[5]  ; regfile[10][5]  ; clk      ;
+; N/A                                     ; None                                                ; -3.765 ns ; wrDataD[14] ; regfile[11][14] ; clk      ;
+; N/A                                     ; None                                                ; -3.766 ns ; wrDataD[2]  ; regfile[11][2]  ; clk      ;
+; N/A                                     ; None                                                ; -3.889 ns ; wrDataD[13] ; regfile[10][13] ; clk      ;
+; N/A                                     ; None                                                ; -3.902 ns ; wrDataD[11] ; regfile[10][11] ; clk      ;
+; N/A                                     ; None                                                ; -3.984 ns ; reset       ; regfile[11][14] ; clk      ;
+; N/A                                     ; None                                                ; -4.026 ns ; reset       ; regfile[11][2]  ; clk      ;
+; N/A                                     ; None                                                ; -4.052 ns ; reset       ; regfile[10][5]  ; clk      ;
+; N/A                                     ; None                                                ; -4.097 ns ; wrDataD[12] ; regfile[15][12] ; clk      ;
+; N/A                                     ; None                                                ; -4.206 ns ; reset       ; regfile[11][12] ; clk      ;
+; N/A                                     ; None                                                ; -4.225 ns ; reset       ; regfile[22][3]  ; clk      ;
+; N/A                                     ; None                                                ; -4.227 ns ; reset       ; regfile[22][0]  ; clk      ;
+; N/A                                     ; None                                                ; -4.228 ns ; reset       ; regfile[22][1]  ; clk      ;
+; N/A                                     ; None                                                ; -4.267 ns ; wrDataD[4]  ; regfile[15][4]  ; clk      ;
+; N/A                                     ; None                                                ; -4.282 ns ; reset       ; regfile[10][11] ; clk      ;
+; N/A                                     ; None                                                ; -4.286 ns ; reset       ; regfile[10][13] ; clk      ;
+; N/A                                     ; None                                                ; -4.297 ns ; reset       ; regfile[6][7]   ; clk      ;
+; N/A                                     ; None                                                ; -4.368 ns ; wrDataD[2]  ; regfile[9][2]   ; clk      ;
+; N/A                                     ; None                                                ; -4.434 ns ; wrDataD[3]  ; regfile[6][3]   ; clk      ;
+; N/A                                     ; None                                                ; -4.493 ns ; wrDataD[5]  ; regfile[26][5]  ; clk      ;
+; N/A                                     ; None                                                ; -4.498 ns ; wrDataD[2]  ; regfile[18][2]  ; clk      ;
+; N/A                                     ; None                                                ; -4.512 ns ; instr[11]   ; regfile[15][10] ; clk      ;
+; N/A                                     ; None                                                ; -4.516 ns ; reset       ; regfile[11][6]  ; clk      ;
+; N/A                                     ; None                                                ; -4.516 ns ; reset       ; regfile[11][8]  ; clk      ;
+; N/A                                     ; None                                                ; -4.516 ns ; reset       ; regfile[10][9]  ; clk      ;
+; N/A                                     ; None                                                ; -4.520 ns ; instr[11]   ; regfile[11][10] ; clk      ;
+; N/A                                     ; None                                                ; -4.522 ns ; reset       ; regfile[11][4]  ; clk      ;
+; N/A                                     ; None                                                ; -4.526 ns ; wrDataD[14] ; regfile[18][14] ; clk      ;
+; N/A                                     ; None                                                ; -4.526 ns ; wrDataD[14] ; regfile[26][14] ; clk      ;
+; N/A                                     ; None                                                ; -4.549 ns ; wrDataD[0]  ; regfile[7][0]   ; clk      ;
+; N/A                                     ; None                                                ; -4.576 ns ; wrDataD[12] ; regfile[16][12] ; clk      ;
+; N/A                                     ; None                                                ; -4.590 ns ; wrDataD[12] ; regfile[9][12]  ; clk      ;
+; N/A                                     ; None                                                ; -4.594 ns ; wrDataD[12] ; regfile[13][12] ; clk      ;
+; N/A                                     ; None                                                ; -4.602 ns ; wrDataD[10] ; regfile[12][10] ; clk      ;
+; N/A                                     ; None                                                ; -4.602 ns ; wrDataD[10] ; regfile[4][10]  ; clk      ;
+; N/A                                     ; None                                                ; -4.612 ns ; wrDataD[5]  ; regfile[2][5]   ; clk      ;
+; N/A                                     ; None                                                ; -4.615 ns ; wrDataD[3]  ; regfile[5][3]   ; clk      ;
+; N/A                                     ; None                                                ; -4.615 ns ; wrDataD[3]  ; regfile[7][3]   ; clk      ;
+; N/A                                     ; None                                                ; -4.624 ns ; wrDataD[10] ; regfile[29][10] ; clk      ;
+; N/A                                     ; None                                                ; -4.624 ns ; wrDataD[10] ; regfile[25][10] ; clk      ;
+; N/A                                     ; None                                                ; -4.624 ns ; instr[11]   ; regfile[16][15] ; clk      ;
+; N/A                                     ; None                                                ; -4.628 ns ; reset       ; regfile[9][2]   ; clk      ;
+; N/A                                     ; None                                                ; -4.630 ns ; wrDataD[3]  ; regfile[3][3]   ; clk      ;
+; N/A                                     ; None                                                ; -4.630 ns ; wrDataD[3]  ; regfile[1][3]   ; clk      ;
+; N/A                                     ; None                                                ; -4.632 ns ; wrDataD[12] ; regfile[10][12] ; clk      ;
+; N/A                                     ; None                                                ; -4.633 ns ; wrDataD[12] ; regfile[2][12]  ; clk      ;
+; N/A                                     ; None                                                ; -4.633 ns ; wrDataD[1]  ; regfile[25][1]  ; clk      ;
+; N/A                                     ; None                                                ; -4.634 ns ; wrDataD[10] ; regfile[15][10] ; clk      ;
+; N/A                                     ; None                                                ; -4.635 ns ; wrDataD[1]  ; regfile[29][1]  ; clk      ;
+; N/A                                     ; None                                                ; -4.641 ns ; wrDataD[5]  ; regfile[9][5]   ; clk      ;
+; N/A                                     ; None                                                ; -4.653 ns ; wrDataD[15] ; regfile[2][15]  ; clk      ;
+; N/A                                     ; None                                                ; -4.674 ns ; wrDataD[10] ; regfile[27][10] ; clk      ;
+; N/A                                     ; None                                                ; -4.677 ns ; wrDataD[10] ; regfile[31][10] ; clk      ;
+; N/A                                     ; None                                                ; -4.685 ns ; wrDataD[12] ; regfile[18][12] ; clk      ;
+; N/A                                     ; None                                                ; -4.687 ns ; wrDataD[12] ; regfile[26][12] ; clk      ;
+; N/A                                     ; None                                                ; -4.712 ns ; wrDataD[1]  ; regfile[5][1]   ; clk      ;
+; N/A                                     ; None                                                ; -4.714 ns ; wrDataD[15] ; regfile[25][15] ; clk      ;
+; N/A                                     ; None                                                ; -4.715 ns ; wrDataD[1]  ; regfile[7][1]   ; clk      ;
+; N/A                                     ; None                                                ; -4.717 ns ; wrDataD[15] ; regfile[29][15] ; clk      ;
+; N/A                                     ; None                                                ; -4.731 ns ; instr[11]   ; regfile[25][8]  ; clk      ;
+; N/A                                     ; None                                                ; -4.731 ns ; instr[11]   ; regfile[25][9]  ; clk      ;
+; N/A                                     ; None                                                ; -4.731 ns ; instr[11]   ; regfile[25][10] ; clk      ;
+; N/A                                     ; None                                                ; -4.731 ns ; instr[11]   ; regfile[25][11] ; clk      ;
+; N/A                                     ; None                                                ; -4.731 ns ; instr[11]   ; regfile[25][12] ; clk      ;
+; N/A                                     ; None                                                ; -4.731 ns ; instr[11]   ; regfile[25][13] ; clk      ;
+; N/A                                     ; None                                                ; -4.731 ns ; instr[11]   ; regfile[25][14] ; clk      ;
+; N/A                                     ; None                                                ; -4.731 ns ; instr[11]   ; regfile[25][15] ; clk      ;
+; N/A                                     ; None                                                ; -4.734 ns ; instr[11]   ; regfile[29][8]  ; clk      ;
+; N/A                                     ; None                                                ; -4.734 ns ; instr[11]   ; regfile[29][9]  ; clk      ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;           ;             ;                 ;          ;
++-----------------------------------------+-----------------------------------------------------+-----------+-------------+-----------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.1 Build 222 10/21/2009 SJ Web Edition
+    Info: Processing started: Thu Oct 31 10:26:46 2019
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off regfile32x32 -c regfile32x32 --timing_analysis_only
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "clk" is an undefined clock
+Info: No valid register-to-register data paths exist for clock "clk"
+Info: tsu for register "regfile[22][0]" (data pin = "instr[9]", clock pin = "clk") is 7.844 ns
+    Info: + Longest pin to register delay is 10.221 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.832 ns) = 0.832 ns; Loc. = PIN_M16; Fanout = 16; PIN Node = 'instr[9]'
+        Info: 2: + IC(5.318 ns) + CELL(0.438 ns) = 6.588 ns; Loc. = LCCOMB_X14_Y4_N6; Fanout = 2; COMB Node = 'Decoder0~15'
+        Info: 3: + IC(1.024 ns) + CELL(0.419 ns) = 8.031 ns; Loc. = LCCOMB_X14_Y8_N18; Fanout = 16; COMB Node = 'regfile[22][0]~29'
+        Info: 4: + IC(1.530 ns) + CELL(0.660 ns) = 10.221 ns; Loc. = LCFF_X9_Y5_N1; Fanout = 1; REG Node = 'regfile[22][0]'
+        Info: Total cell delay = 2.349 ns ( 22.98 % )
+        Info: Total interconnect delay = 7.872 ns ( 77.02 % )
+    Info: + Micro setup delay of destination is -0.036 ns
+    Info: - Shortest clock path from clock "clk" to destination register is 2.341 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.979 ns) = 0.979 ns; Loc. = PIN_H2; Fanout = 1; CLK Node = 'clk'
+        Info: 2: + IC(0.122 ns) + CELL(0.000 ns) = 1.101 ns; Loc. = CLKCTRL_G2; Fanout = 496; COMB Node = 'clk~clkctrl'
+        Info: 3: + IC(0.703 ns) + CELL(0.537 ns) = 2.341 ns; Loc. = LCFF_X9_Y5_N1; Fanout = 1; REG Node = 'regfile[22][0]'
+        Info: Total cell delay = 1.516 ns ( 64.76 % )
+        Info: Total interconnect delay = 0.825 ns ( 35.24 % )
+Info: tco from clock "clk" to destination pin "rdDataA[7]" through register "regfile[4][7]" is 13.708 ns
+    Info: + Longest clock path from clock "clk" to source register is 2.342 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.979 ns) = 0.979 ns; Loc. = PIN_H2; Fanout = 1; CLK Node = 'clk'
+        Info: 2: + IC(0.122 ns) + CELL(0.000 ns) = 1.101 ns; Loc. = CLKCTRL_G2; Fanout = 496; COMB Node = 'clk~clkctrl'
+        Info: 3: + IC(0.704 ns) + CELL(0.537 ns) = 2.342 ns; Loc. = LCFF_X19_Y5_N31; Fanout = 1; REG Node = 'regfile[4][7]'
+        Info: Total cell delay = 1.516 ns ( 64.73 % )
+        Info: Total interconnect delay = 0.826 ns ( 35.27 % )
+    Info: + Micro clock to output delay of source is 0.250 ns
+    Info: + Longest register to pin delay is 11.116 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X19_Y5_N31; Fanout = 1; REG Node = 'regfile[4][7]'
+        Info: 2: + IC(0.446 ns) + CELL(0.150 ns) = 0.596 ns; Loc. = LCCOMB_X18_Y5_N6; Fanout = 1; COMB Node = 'Mux8~12'
+        Info: 3: + IC(0.691 ns) + CELL(0.438 ns) = 1.725 ns; Loc. = LCCOMB_X14_Y5_N0; Fanout = 1; COMB Node = 'Mux8~13'
+        Info: 4: + IC(1.570 ns) + CELL(0.437 ns) = 3.732 ns; Loc. = LCCOMB_X14_Y6_N4; Fanout = 1; COMB Node = 'Mux8~14'
+        Info: 5: + IC(0.480 ns) + CELL(0.416 ns) = 4.628 ns; Loc. = LCCOMB_X15_Y6_N22; Fanout = 1; COMB Node = 'Mux8~15'
+        Info: 6: + IC(0.935 ns) + CELL(0.438 ns) = 6.001 ns; Loc. = LCCOMB_X12_Y6_N20; Fanout = 1; COMB Node = 'Mux8~16'
+        Info: 7: + IC(0.745 ns) + CELL(0.416 ns) = 7.162 ns; Loc. = LCCOMB_X12_Y8_N10; Fanout = 1; COMB Node = 'Mux8~19'
+        Info: 8: + IC(1.196 ns) + CELL(2.758 ns) = 11.116 ns; Loc. = PIN_D8; Fanout = 0; PIN Node = 'rdDataA[7]'
+        Info: Total cell delay = 5.053 ns ( 45.46 % )
+        Info: Total interconnect delay = 6.063 ns ( 54.54 % )
+Info: Longest tpd from source pin "instr[19]" to destination pin "rdDataA[7]" is 17.670 ns
+    Info: 1: + IC(0.000 ns) + CELL(0.810 ns) = 0.810 ns; Loc. = PIN_N11; Fanout = 98; PIN Node = 'instr[19]'
+    Info: 2: + IC(5.903 ns) + CELL(0.437 ns) = 7.150 ns; Loc. = LCCOMB_X18_Y5_N6; Fanout = 1; COMB Node = 'Mux8~12'
+    Info: 3: + IC(0.691 ns) + CELL(0.438 ns) = 8.279 ns; Loc. = LCCOMB_X14_Y5_N0; Fanout = 1; COMB Node = 'Mux8~13'
+    Info: 4: + IC(1.570 ns) + CELL(0.437 ns) = 10.286 ns; Loc. = LCCOMB_X14_Y6_N4; Fanout = 1; COMB Node = 'Mux8~14'
+    Info: 5: + IC(0.480 ns) + CELL(0.416 ns) = 11.182 ns; Loc. = LCCOMB_X15_Y6_N22; Fanout = 1; COMB Node = 'Mux8~15'
+    Info: 6: + IC(0.935 ns) + CELL(0.438 ns) = 12.555 ns; Loc. = LCCOMB_X12_Y6_N20; Fanout = 1; COMB Node = 'Mux8~16'
+    Info: 7: + IC(0.745 ns) + CELL(0.416 ns) = 13.716 ns; Loc. = LCCOMB_X12_Y8_N10; Fanout = 1; COMB Node = 'Mux8~19'
+    Info: 8: + IC(1.196 ns) + CELL(2.758 ns) = 17.670 ns; Loc. = PIN_D8; Fanout = 0; PIN Node = 'rdDataA[7]'
+    Info: Total cell delay = 6.150 ns ( 34.80 % )
+    Info: Total interconnect delay = 11.520 ns ( 65.20 % )
+Info: th for register "regfile[11][8]" (data pin = "wrDataD[8]", clock pin = "clk") is 0.482 ns
+    Info: + Longest clock path from clock "clk" to destination register is 2.329 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.979 ns) = 0.979 ns; Loc. = PIN_H2; Fanout = 1; CLK Node = 'clk'
+        Info: 2: + IC(0.122 ns) + CELL(0.000 ns) = 1.101 ns; Loc. = CLKCTRL_G2; Fanout = 496; COMB Node = 'clk~clkctrl'
+        Info: 3: + IC(0.691 ns) + CELL(0.537 ns) = 2.329 ns; Loc. = LCFF_X17_Y7_N25; Fanout = 1; REG Node = 'regfile[11][8]'
+        Info: Total cell delay = 1.516 ns ( 65.09 % )
+        Info: Total interconnect delay = 0.813 ns ( 34.91 % )
+    Info: + Micro hold delay of destination is 0.266 ns
+    Info: - Shortest pin to register delay is 2.113 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.979 ns) = 0.979 ns; Loc. = PIN_H15; Fanout = 1; PIN Node = 'wrDataD[8]'
+        Info: 2: + IC(0.900 ns) + CELL(0.150 ns) = 2.029 ns; Loc. = LCCOMB_X17_Y7_N24; Fanout = 31; COMB Node = 'regfile~39'
+        Info: 3: + IC(0.000 ns) + CELL(0.084 ns) = 2.113 ns; Loc. = LCFF_X17_Y7_N25; Fanout = 1; REG Node = 'regfile[11][8]'
+        Info: Total cell delay = 1.213 ns ( 57.41 % )
+        Info: Total interconnect delay = 0.900 ns ( 42.59 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 193 megabytes
+    Info: Processing ended: Thu Oct 31 10:26:46 2019
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

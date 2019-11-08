@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Thu Oct 31 10:26:35 2019
+Quartus II Version : 9.1 Build 222 10/21/2009 SJ Web Edition
+Revision Name : regfile32x32
+Top-level Entity Name : regfile32x32
+Family : Cyclone II
+Total logic elements : 892
+    Total combinational functions : 412
+    Dedicated logic registers : 496
+Total registers : 496
+Total pins : 115
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
