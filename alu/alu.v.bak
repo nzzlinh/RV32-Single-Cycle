@@ -17,14 +17,13 @@ module alu(
 	parameter [3:0] B_OUT = 4'b1011;
 	
 	always @(*) begin
-		//case (alu_sel)
-			if (alu_sel == ADD) begin
+		case (alu_sel)
+			ADD: begin
 				alu_out = dataA + dataB;
 			end
-			if (alu_sel == SUB) begin
+			SUB: begin
 				alu_out <= dataA - dataB;
 			end
-		case (alu_sel)
 			SLL: begin
 				alu_out <= dataA << $unsigned(dataB);
 			end

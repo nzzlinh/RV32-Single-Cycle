@@ -22,7 +22,7 @@ assign		pWord = PC[19:2];
 assign		pByte = PC[1:0];
 
 initial begin
-$readmemh("D:/Documents_Study/Computer Architecture/RISC-V_project/TestCode/pipeline_test.txt",IMEM);
+$readmemh("C:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/IMEM/factorial.txt", IMEM);
 end
 
 always@(PC)

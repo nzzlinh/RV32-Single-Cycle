@@ -1,4 +1,4 @@
-module alu(
+module ALU(
 	input [3:0] alu_sel, 
 	input signed [31:0] dataA, 
 	input signed [31:0] dataB, 
