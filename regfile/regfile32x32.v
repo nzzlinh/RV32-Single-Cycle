@@ -21,6 +21,13 @@ module regfile
 	
 	reg [31:0] regfile [0:31];
 
+	integer j;
+	initial begin
+		for (j = 0; j < 32; j = j + 1) begin
+			regfile[j] <= 0;
+		end
+	end
+
 	assign rdDataA = regfile[rdAddrA];
 	assign rdDataB = regfile[rdAddrB];
 

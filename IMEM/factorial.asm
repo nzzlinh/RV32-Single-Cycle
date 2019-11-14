@@ -1,4 +1,8 @@
-lw	a0,40(zero)
+addi	a3, a3, 1
+slli	a3, a3, 12
+addi	a3,a3, 1
+slli	a3,a3, 16
+lw	a0,40(a3)
 addi	a1,zero,1
 addi	a2,zero,1
 beq	a0,a1,SAVE
@@ -10,7 +14,7 @@ jal	ra,MUL
 add	a2,zero,t0
 bne	a1,a0,LOOP
 SAVE:
-sw	a2,44(zero)
+sw	a2,44(a3)
 jal	x0,DONE
 MUL:
 andi	t0,t0,0

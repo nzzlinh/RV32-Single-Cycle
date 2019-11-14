@@ -24,9 +24,7 @@ wire [1:0] wbmux_sel;
 
 // 20bit bus
 wire [14:0] ctrl_out;
-//{pcmux_sel, imm_sel, 
-//regfilemux_sel, cmpop, alumux1_sel, 
-//alumux2_sel, aluop, dmem_sel, wbmux_sel}
+
 
 // Ket noi cac module
 
@@ -43,14 +41,14 @@ control Controller(.instr(imm_in), .breq(breq), .brlt(brlt), .data_out(ctrl_out)
 assign pcmux_sel = ctrl_out[14];
 assign imm_sel = ctrl_out[13:11];
 assign regfilemux_sel = ctrl_out[10];
-assign cmop = ctrl_out[9];
+assign cmpop = ctrl_out[9];
 assign alumux2_sel = ctrl_out[8];
 assign alumux1_sel = ctrl_out[7];
 assign aluop = ctrl_out[6:3];
 assign dmem_sel = ctrl_out[2];
 assign wbmux_sel = ctrl_out[1:0];
 
-decoder RegDecoder(.instr(imm_in), .rd(rd), .rs1(rs1), .rs2(rs2));
+decoder RegDecoder(.instr(imm_in), .rd(rd), .rs1(rs1), .rs2(rs2), .clk(clk));
 
 regfile RegFile(.clk(clk), .reset(), .write(regfilemux_sel), .wrAddrD(rd), .rdAddrA(rs1), 
 		.rdAddrB(rs2), .wrDataD(wb_out), .rdDataA(rs1_out), .rdDataB(rs2_out));

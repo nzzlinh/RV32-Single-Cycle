@@ -1,15 +1,10 @@
 module testbench();
-reg clk = 0;
-initial
-begin
-#1 clk =~ clk;
-#1 clk =~ clk;
-#1 clk =~ clk;
-#1 clk =~ clk;
-#1 clk =~ clk;
-#1 clk =~ clk;
-#1 clk =~ clk;
-#1 clk =~ clk;
+reg clk;
+
+initial begin
+clk = 0;
+end
+always begin
 #1 clk =~ clk;
 end
 top_module _test(clk);

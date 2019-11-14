@@ -7,7 +7,7 @@ module regfile
 	input write,
 	input [4:0] wrAddrD,
 	input [4:0] rdAddrA,
-	input [4:0] wrAddrB,
+	input [4:0] rdAddrB,
 	input [31:0] wrDataD,
 	output [31:0] rdDataA,
 	output [31:0] rdDataB);
@@ -21,11 +21,18 @@ module regfile
 	
 	reg [31:0] regfile [0:31];
 
+	integer j;
+	initial begin
+		for (j = 0; j < 32; j = j + 1) begin
+			regfile[j] <= 0;
+		end
+	end
+
 	assign rdDataA = regfile[rdAddrA];
 	assign rdDataB = regfile[rdAddrB];
 
 	integer i;
-	always @(negedge clk) begin
+	always @(posedge clk) begin
 	if (reset) begin
 		for (i = 0; i < 32; i = i + 1) begin
 			regfile[i] <= 0;

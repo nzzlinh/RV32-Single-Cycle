@@ -22,34 +22,34 @@ module ALU(
 				alu_out = dataA + dataB;
 			end
 			SUB: begin
-				alu_out <= dataA - dataB;
+				alu_out = dataA - dataB;
 			end
 			SLL: begin
-				alu_out <= dataA << $unsigned(dataB);
+				alu_out = dataA << $unsigned(dataB);
 			end
 			SLT: begin
-				alu_out <= (dataA < dataB) ? 1 : 0;
+				alu_out = (dataA < dataB) ? 1 : 0;
 			end
 			SLTU: begin
-				alu_out <= ($unsigned(dataA) < $unsigned(dataB)) ? 1 : 0;
+				alu_out = ($unsigned(dataA) < $unsigned(dataB)) ? 1 : 0;
 			end
 			XOR: begin
-				alu_out <= dataA ^ dataB;
+				alu_out = dataA ^ dataB;
 			end
 			SRL: begin
-				alu_out <= dataA >> $unsigned(dataB);
+				alu_out = dataA >> $unsigned(dataB);
 			end
 			SRA: begin
-				alu_out <= dataA >>> $unsigned(dataB);
+				alu_out = dataA >>> $unsigned(dataB);
 			end
 			OR: begin
-				alu_out <= dataA | dataB;
+				alu_out = dataA | dataB;
 			end
 			AND: begin
-				alu_out <= dataA & dataB;
+				alu_out = dataA & dataB;
 			end
 			B_OUT:
-				alu_out <= dataB;
+				alu_out = dataB;
 		endcase	
 	end
 

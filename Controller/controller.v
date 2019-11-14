@@ -34,25 +34,24 @@ module control(
 	// S type instructions
 	parameter SW	= 11'b?01001000??;
 	// B type instructions
-	parameter BEQ_TRUE  = 11'b?000110000?;
-	parameter BEQ_FALSE = 11'b?000110001?;
+	parameter BEQ_TRUE  = 11'b?000110001?;
+	parameter BEQ_FALSE = 11'b?000110000?;
 	parameter BNE_TRUE  = 11'b?001110000?;
 	parameter BNE_FALSE = 11'b?001110001?;
-	parameter BLT 	= 11'b?10011000?1;
-	parameter BLTU 	= 11'b?11011000?1;
+	parameter BLT 	    = 11'b?10011000?1;
+	parameter BLTU 	    = 11'b?11011000?1;
 	// J type instructions
-	parameter JAL  	= 11'b????11011??;
-	parameter JALR 	= 11'b????11001??;
+	parameter JAL  	    = 11'b????11011??;
+	parameter JALR 	    = 11'b????11001??;
 	// U type instructions 
-	parameter LUI  	= 11'b????01101??;
-	parameter AUIPC	= 11'b????00101??;
+	parameter LUI  	    = 11'b????01101??;
+	parameter AUIPC	    = 11'b????00101??;
 
 
 	// 11 bits control.
 
 	wire [10:0] control_word;
 	assign control_word = {instr[30], instr[14:12], instr[6:2], breq, brlt};
-
 	always @*
 		casez ({instr[30], instr[14:12], instr[6:2], breq, brlt})
 		// R
@@ -81,18 +80,18 @@ module control(
 		SW:	data_out = 15'b00010x1000001xx;
 		// B
 		BEQ_TRUE: 
-			data_out = 15'b0010001100000xx;
+			data_out = 15'b10100x1100000xx;
 		BEQ_FALSE: 
-			data_out = 15'b1010001100000xx;
+			data_out = 15'b00100x1100000xx;
 		BNE_TRUE: 
-			data_out = 15'b1010001100000xx;
+			data_out = 15'b10100x1100000xx;
 		BNE_FALSE:
-			data_out = 15'b0010001100000xx;
+			data_out = 15'b00100x1100000xx;
 		BLT:	data_out = 15'b1010001100000xx;
 		BLTU:	data_out = 15'b1010011100000xx;
 		// J
 		JAL:	data_out = 15'b11001x110000010;
-		JALR:	data_out = 15'b11001x100000010;
+		JALR:	data_out = 15'b10001x100000010;
 		// U
 		LUI:	data_out = 15'b00111x1x1011001;
 		AUIPC:	data_out = 15'b00111x110000001; 

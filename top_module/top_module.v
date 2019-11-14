@@ -41,7 +41,7 @@ control Controller(.instr(imm_in), .breq(breq), .brlt(brlt), .data_out(ctrl_out)
 assign pcmux_sel = ctrl_out[14];
 assign imm_sel = ctrl_out[13:11];
 assign regfilemux_sel = ctrl_out[10];
-assign cmop = ctrl_out[9];
+assign cmpop = ctrl_out[9];
 assign alumux2_sel = ctrl_out[8];
 assign alumux1_sel = ctrl_out[7];
 assign aluop = ctrl_out[6:3];
