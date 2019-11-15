@@ -19,16 +19,16 @@ n@_opt
 Z3 OL;O;10.5;63
 R0
 T_opt1
-!s110 1573699249
-VoLF6`X?E>lK5`LREFQ=6M0
+!s110 1573812314
+VX4g_gLMSd[9eBVW6D`E[n2
 04 9 4 work testbench fast 0
-=1-a81e8417cebd-5dccbeb1-1c9-9d8
+=1-a81e8417cebd-5dce785a-169-610
 R1
 R2
 n@_opt1
 R3
 vadd_4
-Z4 !s110 1573699218
+Z4 !s110 1573812306
 !i10b 1
 !s100 3LMYmTa1YkF7Lg48mllkM0
 ILRY^Nh<3F4G4k;e[n4YFc2
@@ -42,7 +42,7 @@ Z7 OL;L;10.5;63
 r1
 !s85 0
 31
-Z8 !s108 1573699218.000000
+Z8 !s108 1573812306.000000
 !s107 C:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/Mux(s)/add_4.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/Mux(s)/add_4.v|
 !i113 0
@@ -63,7 +63,7 @@ R7
 r1
 !s85 0
 31
-R8
+!s108 1573812305.000000
 !s107 C:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/ALU/ALU.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/ALU/ALU.v|
 !i113 0
@@ -74,20 +74,20 @@ vBranchComp
 R4
 !i10b 1
 !s100 HD@:4I?1@nzRm?6Cccz8T3
-I`0^]XNlSSiI`6@@T?b8771
+IKzkUn];17J8fQ_5ka9:jV3
 R5
 R6
 w1573696157
-8C:\Users\NGUYEN DUY LINH\Desktop\CS_Projects\RISC-V\BrComp\BrComp.v
-FC:\Users\NGUYEN DUY LINH\Desktop\CS_Projects\RISC-V\BrComp\BrComp.v
+8C:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/BrComp/BrComp.v
+FC:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/BrComp/BrComp.v
 L0 1
 R7
 r1
 !s85 0
 31
 R8
-!s107 C:\Users\NGUYEN DUY LINH\Desktop\CS_Projects\RISC-V\BrComp\BrComp.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:\Users\NGUYEN DUY LINH\Desktop\CS_Projects\RISC-V\BrComp\BrComp.v|
+!s107 C:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/BrComp/BrComp.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/BrComp/BrComp.v|
 !i113 0
 R9
 R2
@@ -96,20 +96,20 @@ vcontrol
 R4
 !i10b 1
 !s100 zBgn00OjoCenn_e3@MOQG2
-ITaEaegjo9?NJ7IgfMURXg2
+IkoLkPCGXWf213@CBg[>Od2
 R5
 R6
 w1573662023
-8C:\Users\NGUYEN DUY LINH\Desktop\CS_Projects\RISC-V\Controller\controller.v
-FC:\Users\NGUYEN DUY LINH\Desktop\CS_Projects\RISC-V\Controller\controller.v
+Z10 8C:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/Controller/controller.v
+Z11 FC:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/Controller/controller.v
 L0 1
 R7
 r1
 !s85 0
 31
 R8
-!s107 C:\Users\NGUYEN DUY LINH\Desktop\CS_Projects\RISC-V\Controller\controller.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:\Users\NGUYEN DUY LINH\Desktop\CS_Projects\RISC-V\Controller\controller.v|
+Z12 !s107 C:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/Controller/controller.v|
+Z13 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/Controller/controller.v|
 !i113 0
 R9
 R2
@@ -121,40 +121,62 @@ IYl4iIJ?mjB5:@1^@CXjPK3
 R5
 R6
 w1572886848
-8C:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/Controller/controller.v
-FC:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/Controller/controller.v
+R10
+R11
 L0 1
 R7
 r1
 !s85 0
 31
 !s108 1573217572.000000
-!s107 C:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/Controller/controller.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/Controller/controller.v|
+R12
+R13
 !i113 0
 R9
 R2
 vdecoder
-Z10 !s110 1573699219
+Z14 !s110 1573812307
 !i10b 1
 !s100 eLNbG_Q@7dElR7[XU=c_O0
-IYUBGAUU4R^@PPam8<?<zK0
+ID;]ZemAXmUPDbP0nL8kaR3
 R5
 R6
 w1573380893
-8C:\Users\NGUYEN DUY LINH\Desktop\CS_Projects\RISC-V\regfile_decoder.v
-FC:\Users\NGUYEN DUY LINH\Desktop\CS_Projects\RISC-V\regfile_decoder.v
+Z15 8C:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/regfile_decoder.v
+Z16 FC:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/regfile_decoder.v
 L0 1
 R7
 r1
 !s85 0
 31
-Z11 !s108 1573699219.000000
-!s107 C:\Users\NGUYEN DUY LINH\Desktop\CS_Projects\RISC-V\regfile_decoder.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:\Users\NGUYEN DUY LINH\Desktop\CS_Projects\RISC-V\regfile_decoder.v|
+Z17 !s108 1573812307.000000
+Z18 !s107 C:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/regfile_decoder.v|
+Z19 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/regfile_decoder.v|
 !i113 0
 R9
 R2
+vDMEM
+R4
+!i10b 1
+!s100 ^FYF?nnNMi<ijhMCK:?Mf0
+I]P^8T6gU>WGlD@IemamVh2
+R5
+R6
+w1573809362
+8C:\Users\NGUYEN DUY LINH\Desktop\CS_Projects\RISC-V\DMEM\DMEM.v
+FC:\Users\NGUYEN DUY LINH\Desktop\CS_Projects\RISC-V\DMEM\DMEM.v
+L0 1
+R7
+r1
+!s85 0
+31
+R8
+!s107 C:\Users\NGUYEN DUY LINH\Desktop\CS_Projects\RISC-V\DMEM\DMEM.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:\Users\NGUYEN DUY LINH\Desktop\CS_Projects\RISC-V\DMEM\DMEM.v|
+!i113 0
+R9
+R2
+n@d@m@e@m
 vDmem
 !s110 1573215034
 !i10b 1
@@ -177,46 +199,24 @@ r1
 R9
 R2
 n@dmem
-vDMEM
-R4
-!i10b 1
-!s100 h^=05Zh^ig]DFj?fk<QEe0
-IE?0V9@<m<00TRYaVBnko41
-R5
-R6
-w1573699216
-8C:\Users\NGUYEN DUY LINH\Desktop\CS_Projects\RISC-V\DMEM\DMEM.v
-FC:\Users\NGUYEN DUY LINH\Desktop\CS_Projects\RISC-V\DMEM\DMEM.v
-L0 1
-R7
-r1
-!s85 0
-31
-R8
-!s107 C:\Users\NGUYEN DUY LINH\Desktop\CS_Projects\RISC-V\DMEM\DMEM.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:\Users\NGUYEN DUY LINH\Desktop\CS_Projects\RISC-V\DMEM\DMEM.v|
-!i113 0
-R9
-R2
-n@d@m@e@m
 vIMEM
 R4
 !i10b 1
-!s100 eU_>20n2N5ih;8IVG@U3M0
-IfJRBL4cHSicI8N2IR4=3X3
+!s100 A<]Od7MQO3O_NHLmB3]gQ2
+IzD<C:zhCKo>d=^lX3J^AQ2
 R5
 R6
-w1573223016
-8C:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/IMEM/IMEM.v
-FC:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/IMEM/IMEM.v
+w1573812304
+8C:\Users\NGUYEN DUY LINH\Desktop\CS_Projects\RISC-V\IMEM\IMEM.v
+FC:\Users\NGUYEN DUY LINH\Desktop\CS_Projects\RISC-V\IMEM\IMEM.v
 L0 7
 R7
 r1
 !s85 0
 31
 R8
-!s107 C:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/IMEM/IMEM.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/IMEM/IMEM.v|
+!s107 C:\Users\NGUYEN DUY LINH\Desktop\CS_Projects\RISC-V\IMEM\IMEM.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:\Users\NGUYEN DUY LINH\Desktop\CS_Projects\RISC-V\IMEM\IMEM.v|
 !i113 0
 R9
 R2
@@ -244,7 +244,7 @@ R9
 R2
 n@imm@gen
 vmux2
-R10
+R14
 !i10b 1
 !s100 Cc==A7ebRJ`8_C<]E8J>:1
 ITA0d87UDG140[56VL8B3J1
@@ -258,14 +258,14 @@ R7
 r1
 !s85 0
 31
-R11
+R17
 !s107 C:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/Mux(s)/mux2.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/Mux(s)/mux2.v|
 !i113 0
 R9
 R2
 vpc
-R10
+R4
 !i10b 1
 !s100 ZhkF=EC3E@g@C[4PLhafe3
 IKf<F?a1f2U3Z6gKjl_OG81
@@ -279,7 +279,7 @@ R7
 r1
 !s85 0
 31
-R11
+R8
 !s107 C:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/PC/pc.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/PC/pc.v|
 !i113 0
@@ -307,23 +307,23 @@ r1
 R9
 R2
 vregfile
-R10
+R14
 !i10b 1
 !s100 ]3Z2=1n8[P1Do6f_8?L4X0
-I5<LNU`Q8O_PM9T93]Xgiz3
+I3I3]K@mzkc;eHedK37ZN[3
 R5
 R6
 w1573441105
-8C:\Users\NGUYEN DUY LINH\Desktop\CS_Projects\RISC-V\Regfile\regfile32x32.v
-FC:\Users\NGUYEN DUY LINH\Desktop\CS_Projects\RISC-V\Regfile\regfile32x32.v
+8C:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/Regfile/regfile32x32.v
+FC:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/Regfile/regfile32x32.v
 L0 4
 R7
 r1
 !s85 0
 31
-R11
-!s107 C:\Users\NGUYEN DUY LINH\Desktop\CS_Projects\RISC-V\Regfile\regfile32x32.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:\Users\NGUYEN DUY LINH\Desktop\CS_Projects\RISC-V\Regfile\regfile32x32.v|
+R8
+!s107 C:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/Regfile/regfile32x32.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/Regfile/regfile32x32.v|
 !i113 0
 R9
 R2
@@ -335,21 +335,21 @@ IB7^D4Vg3g06@V`4:QTenS3
 R5
 R6
 w1573217407
-8C:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/regfile_decoder.v
-FC:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/regfile_decoder.v
+R15
+R16
 L0 1
 R7
 r1
 !s85 0
 31
 !s108 1573220411.000000
-!s107 C:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/regfile_decoder.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/regfile_decoder.v|
+R18
+R19
 !i113 0
 R9
 R2
 vtestbench
-R10
+R14
 !i10b 1
 !s100 S3jm1?=XG6HfUJ5l8cf`]0
 I:o14`O0S:eLP5fL5miciW2
@@ -363,35 +363,35 @@ R7
 r1
 !s85 0
 31
-R11
+R17
 !s107 C:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/testbench/testbench.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/testbench/testbench.v|
 !i113 0
 R9
 R2
 vtop_module
-R10
+R14
 !i10b 1
 !s100 mQD<EN=6z<JJCU>DTe=m63
-IPD58VD`nefE0WW<f^UkHQ1
+I9bKMPJJF3m<C_DJ9?^2P?3
 R5
 R6
 w1573380812
-8C:\Users\NGUYEN DUY LINH\Desktop\CS_Projects\RISC-V\top_module\top_module.v
-FC:\Users\NGUYEN DUY LINH\Desktop\CS_Projects\RISC-V\top_module\top_module.v
+8C:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/top_module/top_module.v
+FC:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/top_module/top_module.v
 L0 1
 R7
 r1
 !s85 0
 31
-R11
-!s107 C:\Users\NGUYEN DUY LINH\Desktop\CS_Projects\RISC-V\top_module\top_module.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:\Users\NGUYEN DUY LINH\Desktop\CS_Projects\RISC-V\top_module\top_module.v|
+R17
+!s107 C:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/top_module/top_module.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/top_module/top_module.v|
 !i113 0
 R9
 R2
 vwbmux
-R10
+R4
 !i10b 1
 !s100 ij7Q23J=fEGQN87kEm[6@2
 IgNni][1_P@9^Od:][T_Z=1
@@ -405,7 +405,7 @@ R7
 r1
 !s85 0
 31
-R11
+R8
 !s107 C:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/Mux(s)/wbmux.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/Mux(s)/wbmux.v|
 !i113 0

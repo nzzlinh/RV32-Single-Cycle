@@ -22,7 +22,7 @@ assign		pWord = PC[19:2];
 assign		pByte = PC[1:0];
 
 initial begin
-$readmemh("C:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/IMEM/factorial.txt", IMEM);
+$readmemh("C:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/IMEM/bubblesort.txt", IMEM);
 end
 
 always@(PC)

@@ -7,12 +7,12 @@ input MemRW;
 
 reg [7:0] datafile [0:1023];
 
-initial begin
-	datafile[40]<=8'h0A;
+/*initial begin
+	datafile[40]<=8'h00;
 	datafile[41]<=8'h00;
 	datafile[42]<=8'h00;
 	datafile[43]<=8'h00;
-	/*datafile[44]<=8'h00;
+	datafile[44]<=8'h00;
 	datafile[45]<=8'h00;
 	datafile[46]<=8'h00;
 	datafile[47]<=8'h02;
@@ -47,15 +47,15 @@ initial begin
 	datafile[76]<=8'h00;
 	datafile[77]<=8'h00;
 	datafile[78]<=8'h00;
-	datafile[79]<=8'h0a;*/
-end
+	datafile[79]<=8'h0a;
+end */
 	
 	assign DataR[7:0] = datafile[Addr];
 	assign DataR[15:8] = datafile[Addr+1];
 	assign DataR[23:16] = datafile[Addr+2];
 	assign DataR[31:24] = datafile[Addr+3];
 
-	always @(posedge clk) begin
+	always @(negedge clk) begin
 	if(MemRW == 1) begin
 		datafile[Addr] <= DataW[7:0];	//theo quy tac little edian
 		datafile[Addr+1] <= DataW[15:8];

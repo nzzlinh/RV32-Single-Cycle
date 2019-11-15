@@ -5,7 +5,7 @@ Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
 Top level modules:
 	ALU
 
-} {} {}} {C:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/regfile_decoder.v} {1 {vlog -work work -vopt -stats=none {C:\Users\NGUYEN DUY LINH\Desktop\CS_Projects\RISC-V\regfile_decoder.v}
+} {} {}} {C:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/regfile_decoder.v} {1 {vlog -work work -vopt -stats=none {C:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/regfile_decoder.v}
 Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
 -- Compiling module decoder
 
@@ -19,7 +19,7 @@ Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
 Top level modules:
 	DMEM
 
-} {} {}} {C:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/BrComp/BrComp.v} {1 {vlog -work work -vopt -stats=none {C:\Users\NGUYEN DUY LINH\Desktop\CS_Projects\RISC-V\BrComp\BrComp.v}
+} {} {}} {C:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/BrComp/BrComp.v} {1 {vlog -work work -vopt -stats=none {C:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/BrComp/BrComp.v}
 Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
 -- Compiling module BranchComp
 
@@ -40,19 +40,12 @@ Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
 Top level modules:
 	pc
 
-} {} {}} {C:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/top_module/top_module.v} {1 {vlog -work work -vopt -stats=none {C:\Users\NGUYEN DUY LINH\Desktop\CS_Projects\RISC-V\top_module\top_module.v}
+} {} {}} {C:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/top_module/top_module.v} {1 {vlog -work work -vopt -stats=none {C:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/top_module/top_module.v}
 Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
 -- Compiling module top_module
 
 Top level modules:
 	top_module
-
-} {} {}} {C:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/IMEM/IMEM.v} {1 {vlog -work work -vopt -stats=none {C:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/IMEM/IMEM.v}
-Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
--- Compiling module IMEM
-
-Top level modules:
-	IMEM
 
 } {} {}} {C:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/Mux(s)/add_4.v} {1 {vlog -work work -vopt -stats=none {C:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/Mux(s)/add_4.v}
 Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
@@ -75,7 +68,7 @@ Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
 Top level modules:
 	mux2
 
-} {} {}} {C:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/Controller/controller.v} {1 {vlog -work work -vopt -stats=none {C:\Users\NGUYEN DUY LINH\Desktop\CS_Projects\RISC-V\Controller\controller.v}
+} {} {}} {C:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/Controller/controller.v} {1 {vlog -work work -vopt -stats=none {C:/Users/NGUYEN DUY LINH/Desktop/CS_Projects/RISC-V/Controller/controller.v}
 Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
 -- Compiling module control
 
